@@ -436,3 +436,15 @@ java.io.FileNotFoundException: http://www.pramati.com/downloads/eclipse/updates/
 
 !ENTRY org.eclipse.equinox.p2.updatesite 4 0 2018-06-01 13:49:32.632
 !MESSAGE Error reading feature http://www.pramati.com/downloads/eclipse/updates/features/com.pramati.eclipse.feature_2.2.0.jar.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-06-01 13:58:20.066
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-06-01 13:58:39.850
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-01 13:58:57.501
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-06-01 13:59:05.187
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
