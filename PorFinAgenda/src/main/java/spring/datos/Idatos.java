@@ -1,8 +1,8 @@
-package datos;
+package spring.datos;
 
 import java.util.ArrayList;
 
-import model.Empleados;
+import spring.model.Empleados;
 
 public interface Idatos {
 	
