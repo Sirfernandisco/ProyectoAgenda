@@ -16,6 +16,6 @@
 		<property name="show_sql">true</property>
 		
 		<!-- Archivos Mapping -->
-		<mapping class="spring.model.Empleados" />
+		<mapping class="spring.model.Cliente" />
 	</session-factory>
 </hibernate-configuration>

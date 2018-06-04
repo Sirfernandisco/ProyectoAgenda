@@ -1,0 +1,3 @@
+127.0.0.1 - - [04/Jun/2018:15:10:51 +0200] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [04/Jun/2018:15:10:54 +0200] "GET /PorFinAgenda/ HTTP/1.1" 200 1651
+0:0:0:0:0:0:0:1 - - [04/Jun/2018:15:10:54 +0200] "GET /PorFinAgenda/resources/css/estilos.css;jsessionid=C7C8E10E68290C7216EAE6B1C75C953A HTTP/1.1" 200 1052
