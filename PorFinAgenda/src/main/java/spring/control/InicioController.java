@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import spring.model.Cliente;
 
-@Controller
 
+@Controller
 public class InicioController {
 	  @ModelAttribute("cliente")
 	  public Cliente getClienteObject() {
@@ -17,7 +17,7 @@ public class InicioController {
 	      return new Cliente();
 	  }
 
-	  @RequestMapping(value = "/", method = RequestMethod.GET)
+	  @RequestMapping("/")
 	  public String initForm() {
 	      System.out.println("--- metodo cliente");
 
