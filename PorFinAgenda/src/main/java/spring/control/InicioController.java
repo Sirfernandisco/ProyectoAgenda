@@ -1,16 +1,26 @@
 package spring.control;
 
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import spring.model.Cliente;
+import spring.model.Empleados;
+import spring.services.Services;
 
 
 @Controller
 public class InicioController {
+	
+	@Autowired
+	private Services userService;
+	
 	  @ModelAttribute("cliente")
 	  public Cliente getClienteObject() {
 	      System.out.println("-- devuelvo un objeto vacio");
@@ -24,6 +34,14 @@ public class InicioController {
 
 	      return "form1";
 	  }
+	  
+		@RequestMapping("/")
+		public ModelAndView handleRequest() throws Exception {
+			ArrayList<Empleados> listUsers = userService.mostrarEmpleados();
+			ModelAndView model = new ModelAndView("UserList");
+			model.addObject("userList", listUsers);
+			return model;
+		}
 	  
 
 	  @RequestMapping(value = "/addCliente", method = RequestMethod.POST)

@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import spring.datos.Datos;
 import spring.model.Empleados;
 
-//@Service
+@Service
 @Transactional
-public class Service implements IService{
+public class Services implements IService{
 
 		@Autowired
 		private Datos datos;
