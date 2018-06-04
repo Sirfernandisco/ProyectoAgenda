@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
 <spring:url value="/resources/css/estilos.css" var="estilos" />
 <link href="${estilos}" rel="stylesheet" />           
-        <title>Spring(06a) - Formulario 1</title>
+        <title>Jasdasd</title>
     </head>
     <body>
 

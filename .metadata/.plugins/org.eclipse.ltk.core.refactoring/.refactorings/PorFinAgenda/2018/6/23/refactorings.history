@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;spring.services.Service&apos; to &apos;Services&apos;&#x0D;&#x0A;- Original project: &apos;PorFinAgenda&apos;&#x0D;&#x0A;- Original element: &apos;spring.services.Service&apos;&#x0D;&#x0A;- Renamed element: &apos;spring.services.Services&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Service&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;spring.services{Service.java[Service" matchStrategy="1" name="Services" qualified="false" references="true" similarDeclarations="false" stamp="1528120056780" textual="false" version="1.0"/>
+</session>
