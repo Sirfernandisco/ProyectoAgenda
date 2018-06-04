@@ -27,20 +27,20 @@ public class InicioController {
 	      return new Cliente();
 	  }
 
-//	  @RequestMapping("/")
-//	  public String initForm() {
-//	      System.out.println("--- metodo cliente");
-//
-//
-//	      return "form1";
-//	  }
+	  @RequestMapping("/")
+	  public String initForm() {
+	      System.out.println("--- metodo cliente");
+
+
+	      return "form1";
+	  }
 	  
 	  // añadido para mostrar empleados falta modificar
 		@RequestMapping("/")
 		public ModelAndView handleRequest() throws Exception {
 			ArrayList<Empleados> listUsers = userService.mostrarEmpleados();
-			ModelAndView model = new ModelAndView("form1");
-			model.addObject("lista", listUsers);
+			ModelAndView model = new ModelAndView("UserList");
+			model.addObject("userList", listUsers);
 			return model;
 		}
 	  
