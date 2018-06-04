@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE hibernate-configuration SYSTEM 
-"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
-		<!-- Datasource de la Base de Datos -->
-		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://1090.36.7:3306/agenda</property>
-		<property name="connection.username">admin</property>
-		<property name="connection.password">1111</property>
-
-		<!-- Propiedades adicionales -->		
-		<property name="connection.pool_size">1</property>
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="show_sql">true</property>
-		
-		<!-- Archivos Mapping -->
-		<mapping class="spring.model.Cliente" />
-	</session-factory>
+    <session-factory name="FProyecto">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">1111</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.90.36.7/agenda</property>
+        <property name="hibernate.connection.username">admin</property>
+        <property name="hibernate.default_schema">agenda</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    </session-factory>
 </hibernate-configuration>
