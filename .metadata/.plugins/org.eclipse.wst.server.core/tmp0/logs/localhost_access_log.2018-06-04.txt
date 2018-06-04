@@ -141,3 +141,8 @@
 0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:02:14 +0200] "GET /PorFinAgenda/ HTTP/1.1" 404 1030
 0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:02:15 +0200] "GET /PorFinAgenda/ HTTP/1.1" 404 1030
 0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:02:15 +0200] "GET /PorFinAgenda/ HTTP/1.1" 404 1030
+127.0.0.1 - - [04/Jun/2018:17:08:33 +0200] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:08:34 +0200] "GET /Spring11-MVCHibernate/ HTTP/1.1" 500 16885
+127.0.0.1 - - [04/Jun/2018:17:13:26 +0200] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:13:27 +0200] "GET /Spring11-MVCHibernate/ HTTP/1.1" 500 16885
+0:0:0:0:0:0:0:1 - - [04/Jun/2018:17:13:40 +0200] "GET /Spring11-MVCHibernate/WEB-INF/classes/spring/control/InicioController.java HTTP/1.1" 404 1002
