@@ -35,7 +35,6 @@ public class InicioController {
 	      return "form1";
 	  }
 	  
-	  // añadido para mostrar empleados falta modificar
 		@RequestMapping("/")
 		public ModelAndView handleRequest() throws Exception {
 			ArrayList<Empleados> listUsers = userService.mostrarEmpleados();
