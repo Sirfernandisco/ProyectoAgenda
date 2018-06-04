@@ -50,11 +50,11 @@
 			<th>Acciones</th>
 			</tr>
 
-			<c:forEach var="user" items="${lista}" varStatus="status">
+			<c:forEach var="lista" items="${lista}" varStatus="status">
 				<tr>
 					<td>${status.index + 1}</td>
-					<td>${empleados.username}</td>
-					<td>${empleados.email}</td>
+					<td>${empleados.departamentos}</td>
+					<td>${empleados.categorias}</td>
 					<td><a href="edit?id=${empleados.idempleados}">Modificar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${empleados.id}">Eliminar</a>
 					</td>
