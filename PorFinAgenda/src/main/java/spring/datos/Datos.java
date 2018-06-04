@@ -30,7 +30,7 @@ public class Datos implements Idatos{
 		ArrayList<Empleados> listUser = (ArrayList<Empleados>) sessionFactory.getCurrentSession()
 				.createCriteria(Empleados.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
-
+		System.out.println(listUser);
 		return listUser;
 	}
 

@@ -524,3 +524,15 @@ java.io.IOException: El proceso no tiene acceso al archivo porque otro proceso t
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-06-04 14:52:37.618
 !MESSAGE No repository found at http://www.apache.org/dist/geronimo/eclipse/updates/.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-06-04 15:07:11.687
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-04 15:07:39.226
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-06-04 15:07:50.356
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-04 15:10:37.074
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
