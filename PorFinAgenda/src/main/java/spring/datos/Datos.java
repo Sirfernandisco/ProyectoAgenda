@@ -14,7 +14,7 @@ import spring.model.Empleados;
 @Repository
 public class Datos implements Idatos{
 	
-	//@Autowired
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public Datos() {
