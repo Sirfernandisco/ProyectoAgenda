@@ -44,7 +44,7 @@
                                 <ul class="navbar-nav">
                                    
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"><strong>Empleados</strong></a>
+                                        <a class="nav-link" href="mostrar"><strong>Empleados</strong></a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="#"><strong>Categoría</strong></a>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <form class="form-wrap mt-4">
+                                <form class="form-wrap mt-4" method="post" action="buscar">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <input type="text" placeholder="Primer Apellido" class="btn-group1">
                                         <input type="text" placeholder="Segundo apellido" class="btn-group2">
