@@ -29,9 +29,7 @@ public class InicioController {
 
 	  @RequestMapping("/")
 	  public String initForm() {
-      System.out.println("--- metodo cliente");
-
-
+    
      return "index";
 	  }
 	  
