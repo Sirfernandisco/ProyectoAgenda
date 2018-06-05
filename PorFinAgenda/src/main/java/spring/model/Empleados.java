@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -32,7 +33,7 @@ public class Empleados implements java.io.Serializable {
 	private String codEmpleado;
 	private String salario;
 	private Date fechaAlta;
-	private Set<Personas> personases = new HashSet<Personas>(0);
+	private Personas personases;
 
 	public Empleados() {
 	}
@@ -42,7 +43,7 @@ public class Empleados implements java.io.Serializable {
 	}
 
 	public Empleados(Categorias categorias, Departamentos departamentos, String codEmpleado, String salario,
-			Date fechaAlta, Set<Personas> personases) {
+			Date fechaAlta, Personas personases) {
 		this.categorias = categorias;
 		this.departamentos = departamentos;
 		this.codEmpleado = codEmpleado;
@@ -111,12 +112,12 @@ public class Empleados implements java.io.Serializable {
 		this.fechaAlta = fechaAlta;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empleados")
-	public Set<Personas> getPersonases() {
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "empleados")
+	public Personas getPersonases() {
 		return this.personases;
 	}
 
-	public void setPersonases(Set<Personas> personases) {
+	public void setPersonases(Personas personases) {
 		this.personases = personases;
 	}
 

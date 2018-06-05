@@ -77,5 +77,6 @@ public class Categorias implements java.io.Serializable {
 	public void setEmpleadoses(Set<Empleados> empleadoses) {
 		this.empleadoses = empleadoses;
 	}
+	
 
 }
