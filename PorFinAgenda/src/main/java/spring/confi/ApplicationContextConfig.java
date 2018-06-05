@@ -16,14 +16,20 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import spring.model.Categorias;
+import spring.model.Departamentos;
+import spring.model.Direcciones;
 import spring.model.Empleados;
+import spring.model.Personas;
+import spring.model.Telefonos;
 
 
 
 @Configuration
-@ComponentScan("spring")
+@ComponentScan(basePackages="spring")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
+	
     @Bean(name = "viewResolver")
     public InternalResourceViewResolver getViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -64,6 +70,11 @@ public class ApplicationContextConfig {
     	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
     	sessionBuilder.addProperties(getHibernateProperties());
     	sessionBuilder.addAnnotatedClasses(Empleados.class);
+    	sessionBuilder.addAnnotatedClasses(Categorias.class);
+    	sessionBuilder.addAnnotatedClasses(Departamentos.class);
+    	sessionBuilder.addAnnotatedClasses(Direcciones.class);
+    	sessionBuilder.addAnnotatedClasses(Personas.class);
+    	sessionBuilder.addAnnotatedClasses(Telefonos.class);
     	return sessionBuilder.buildSessionFactory();
     }
     

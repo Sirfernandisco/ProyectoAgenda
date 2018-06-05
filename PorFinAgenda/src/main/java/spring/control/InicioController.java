@@ -19,7 +19,7 @@ import spring.services.IService;
 @Controller
 public class InicioController {
 	
-	@Autowired
+	//@Autowired
 	private IService userService;
 	
 	  @ModelAttribute("cliente")
