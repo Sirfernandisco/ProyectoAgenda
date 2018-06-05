@@ -18,6 +18,10 @@ import javax.persistence.TemporalType;
 @Table(name = "personas", catalog = "agenda")
 public class Personas implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer idpersonas;
 	private String nombre;
 	private String apellido1;
