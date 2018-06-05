@@ -15,20 +15,20 @@
     <!-- Page Title -->
     <title>Agenda RoneaWork</title>
     
-    <spring:url value="/resources/css/style.css" var="estilos" />
-	<link href="${estilos}" rel="stylesheet" /> 
+<%--     <spring:url value="/resources/css/style.css" var="estilos" /> --%>
+<%-- 	<link href="${estilos}" rel="stylesheet" />  --%>
     
-    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
-	<link href="${bootstrap}" rel="stylesheet" />
+<%--     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> --%>
+<%-- 	<link href="${bootstrap}" rel="stylesheet" /> --%>
 	
-	<spring:url value="/resources/css/simple-line-icons.css" var="line" />
-	<link href="${line}" rel="stylesheet" />
+<%-- 	<spring:url value="/resources/css/simple-line-icons.css" var="line" /> --%>
+<%-- 	<link href="${line}" rel="stylesheet" /> --%>
 	
-	<spring:url value="/resources/css/themify-icons.css" var="icon" />
-	<link href="${icon}" rel="stylesheet" />
+<%-- 	<spring:url value="/resources/css/themify-icons.css" var="icon" /> --%>
+<%-- 	<link href="${icon}" rel="stylesheet" /> --%>
 	
-	<spring:url value="/resources/css/set1.css" var="set" />
-	<link href="${set}" rel="stylesheet" />
+<%-- 	<spring:url value="/resources/css/set1.css" var="set" /> --%>
+<%-- 	<link href="${set}" rel="stylesheet" /> --%>
 	
 	
 	
@@ -63,7 +63,7 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                    
-                                    <li class="nav-item active">
+                                    <li class="nav-item active" style="color: black">
                                         <a class="nav-link" href="mostrar"><strong>Empleados</strong></a>
                                     </li>
                                     <li class="nav-item active">
@@ -103,8 +103,8 @@
                             <div class="col-md-10">
                                 <form class="form-wrap mt-4" method="post" action="buscar">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <input type="text" placeholder="Primer Apellido" class="btn-group1">
-                                        <input type="text" placeholder="Segundo apellido" class="btn-group2">
+                                        <input type="text" placeholder="Primer Apellido" class="btn-group1" name="primer">
+                                        <input type="text" placeholder="Segundo apellido" class="btn-group2" name="segundo">
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                     </div>
                                 </form>

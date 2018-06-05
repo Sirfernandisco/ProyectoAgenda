@@ -54,7 +54,7 @@ public class InicioController {
 			//String apellido2 = request.getParameter("segundo");
 			Empleados empleado= userService.get(idempleados);
 			ModelAndView model = new ModelAndView("ficha");
-			model.addObject("lista2", empleado);
+			model.addObject("empleado", empleado);
 			return model;
 		}
 	  

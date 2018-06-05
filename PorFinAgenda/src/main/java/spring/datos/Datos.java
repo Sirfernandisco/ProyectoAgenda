@@ -58,14 +58,11 @@ public class Datos implements Idatos{
 		String hql = "from Empleados where idempleados=" + idempleados;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
-		@SuppressWarnings("unchecked")
-		List<Empleados> listUser = (List<Empleados>) query.list();
 		
-		if (listUser != null && !listUser.isEmpty()) {
-			return listUser.get(0);
-		}
+		Empleados empleado = (Empleados) query.list();
 		
-		return null;
+		
+		return empleado;
 	}
 }
 
