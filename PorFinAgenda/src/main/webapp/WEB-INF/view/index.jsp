@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,7 +44,7 @@
                                 <ul class="navbar-nav">
                                    
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"><strong>Empleados</strong></a>
+                                        <a class="nav-link" href="mostrar"><strong>Empleados</strong></a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="#"><strong>Categoría</strong></a>
