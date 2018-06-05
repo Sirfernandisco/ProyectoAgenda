@@ -59,7 +59,7 @@ public class Datos implements Idatos{
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		
-		Empleados empleado = (Empleados) query.list();
+		Empleados empleado = (Empleados) query.uniqueResult();
 		
 		
 		return empleado;
