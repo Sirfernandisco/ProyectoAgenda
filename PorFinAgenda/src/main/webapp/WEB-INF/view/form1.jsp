@@ -19,29 +19,20 @@
 
 		<table border="1">
 			<tr>
-				<th>id</th>
-				<th>Categorias</th>
-				<th>Departamentos</th>
-				<th>CodEmpleado</th>
-				<th>Nombre y Apellidos</th>
+				<th>idempleados</th>
+				<th>codEmpleado</th>
+				<th>nombre categoria</th>
+				<th>nombre departamento</th>
 				<th>salario</th>
 			</tr>
 
 			<c:forEach var="Empleados" items="${lista}">
 				<tr>
 					<td>${Empleados.idempleados}</td>
-					<td>${Empleados.categorias.nombre}</td>
-					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.codEmpleado}</td>
-					<td>${Empleados.personases.nombre} ${Empleados.personases.apellido1} ${Empleados.personases.apellido2}</td>
+				<%-- <td>${Empleados.categorias.nombre}</td> --%>
+				<%-- <td>${Empleados.departamentos.nombre}</td> --%>
 					<td>${Empleados.salario}</td>
-					<td>
-					<a href="detalle?id=${Empleados.idempleados}">Detalles</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="edit?id=${Empleados.idempleados}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; 
-						<a href="delete?id=${Empleados.idempleados}">Eliminar</a>
-						</td>
 				</tr>
 			</c:forEach>
 		</table>
