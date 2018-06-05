@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -24,7 +25,7 @@ import spring.model.Personas;
 import spring.model.Telefonos;
 
 
-
+@EnableWebMvc
 @Configuration
 @ComponentScan(basePackages="spring")
 @EnableTransactionManagement
@@ -40,7 +41,7 @@ public class ApplicationContextConfig {
     
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 		//registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");	  
 	}
      

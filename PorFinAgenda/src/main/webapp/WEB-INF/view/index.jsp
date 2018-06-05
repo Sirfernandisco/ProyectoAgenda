@@ -14,6 +14,11 @@
     <meta name="keywords" content="#">
     <!-- Page Title -->
     <title>Agenda RoneaWork</title>
+    
+    <spring:url value="/resources/css/style.css" var="estilos" />
+	<link href="${estilos}" rel="stylesheet" /> 
+    
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Google Fonts -->
@@ -24,8 +29,8 @@
     <link rel="stylesheet" href="css/themify-icons.css">
     <!-- Hover Effects -->
     <link rel="stylesheet" href="css/set1.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Main CSS 
+    <link rel="stylesheet" href="/style.css">-->
 </head>
 
 <body>
