@@ -2,6 +2,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html lang="es">
 
 <head>
@@ -26,6 +31,24 @@
     <link rel="stylesheet" href="css/set1.css">
 <!--     Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <spring:url value="/resources/css/bootstrap.min.css" var="estilos1" />
+		<link href="${estilos1}" rel="stylesheet" />
+		<spring:url value="static/css/bootstrap.min.css" var="bootstrap"/>
+        <link href="${bootstrap}" rel="stylesheet" />
+        <spring:url value="static/css/style.css" var="custom"/>
+        <link href="${custom}" rel="stylesheet" />  
+		
+		<spring:url value="/resources/css/custom.css" var="estilos3" />
+		<link href="${estilos3}" rel="stylesheet" />		
+	
+		<spring:url value="css/bootstrap.min.css" var="estilos2" />
+		<link href="${estilos2}" rel="stylesheet" />	
+		
+        <link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
+        
+        <link href="static/css/style.css" rel="stylesheet" type="text/css" />    
+         <link href="static/style.css" rel="stylesheet" type="text/css" />   
     
 <%--     <spring:url value="css/bootstrap.min.css" var="bootstrap" /> --%>
 <%--     <spring:url value="css/simple-line-icons.css" var="icons" /> --%>
