@@ -20,17 +20,30 @@
     
     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
 	<link href="${bootstrap}" rel="stylesheet" />
+	
+	<spring:url value="/resources/css/simple-line-icons.css" var="line" />
+	<link href="${line}" rel="stylesheet" />
+	
+	<spring:url value="/resources/css/themify-icons.css" var="icon" />
+	<link href="${icon}" rel="stylesheet" />
+	
+	<spring:url value="/resources/css/set1.css" var="set" />
+	<link href="${set}" rel="stylesheet" />
+	
+	
+	
+	
     
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <!-- Simple line Icon -->
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-    <!-- Themify Icon -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Hover Effects -->
-    <link rel="stylesheet" href="css/set1.css">
+    <!-- Simple line Icon 
+    <link rel="stylesheet" href="css/simple-line-icons.css">-->
+    <!-- Themify Icon 
+    <link rel="stylesheet" href="css/themify-icons.css">-->
+    <!-- Hover Effects 
+    <link rel="stylesheet" href="css/set1.css">-->
     <!-- Main CSS 
     <link rel="stylesheet" href="/style.css">-->
 </head>
