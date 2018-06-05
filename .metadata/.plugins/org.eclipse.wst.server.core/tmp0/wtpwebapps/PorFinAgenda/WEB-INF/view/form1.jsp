@@ -1,66 +1,49 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
+<head>
+<meta charset="UTF-8">
 <spring:url value="/resources/css/estilos.css" var="estilos" />
-<link href="${estilos}" rel="stylesheet" />           
-        <title>Jasdasd</title>
-    </head>
-    <body>
+<link href="${estilos}" rel="stylesheet" />
+<title>Lista de empleados</title>
+</head>
+<body>
 
-<!--         <div id="contenedor"> -->
-<!--             <h2>Spring(06a) - Form1 <br />(Anotac + Model_View + Model + RequestMapping)</h2> -->
-<!--             IMPORTANTE: Puedo usar   modelAttribute="cliente"   o     commandName="cliente" -->
-<!--             Vale cualqueira de los dos y especifica el objeto donde iran los datos que se recojan  -->
-<!--             Previamente he pasado por ClienteController para recoger un cliente acio -->
-<%--             <form:form method="post" commandName="cliente" action="addCliente.htm"> --%>
-<!--                 <table> -->
-<!--                     <tr> -->
-<%--                         <td><form:label path="nombre">Nombre</form:label></td> --%>
-<%--                         <td><form:input path="nombre" /></td> --%>
-<!--                     </tr> -->
-<!--                     <tr> -->
-<%--                         <td><form:label path="id">Nombre Usuario</form:label></td> --%>
-<%--                         <td><form:input path="id" /></td> --%>
-<!--                     </tr> -->
-<!--                     <tr> -->
-<%--                         <td><form:label path="password">Contraseña</form:label></td> --%>
-<%--                         <td><form:input path="password" /></td> --%>
-<!--                     </tr>                     -->
-<!--                 </table> -->
-<!--                 <br /> -->
-<!--                 <p><input type="submit" value="Dar de alta" /></p> -->
-<%--             </form:form> --%>
-<!--         </div> -->
-        
-        <div align="center">
-		<h1>LISTADO DE USUARIOS</h1>
+	<div align="center">
+		<h1>LISTADO DE EMPLEADOS</h1>
 		<h3>
-			<a href="new">Clic para crear un NUEVO USUARIO</a>
+			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
 
 		<table border="1">
-		<tr>
-			<th>Nº</th>
-			<th>Usuario</th>
-			<th>Email</th>
-			<th>Acciones</th>
+			<tr>
+				<th>idEmpleados</th>
+				<th>Categorias</th>
+				<th>Departamentos</th>
+				<th>CodEmpleado</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>salario</th>
+				
 			</tr>
 
-			<c:forEach var="lista" items="${lista}" varStatus="status">
+			<c:forEach var="Empleados" items="${lista}">
 				<tr>
-					<td>${status.index + 1}</td>
-					<td>${empleados.codEmpleado}</td>
-					<td>${empleados.salario}</td>
-					<td><a href="edit?id=${empleados.idempleados}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${empleados.idempleados}">Eliminar</a>
-					</td>
+					<td>${Empleados.idempleados}</td>
+					<td>${Empleados.categorias.nombre}</td>
+					<td>${Empleados.departamentos.nombre}</td>
+					<td>${Empleados.codEmpleado}</td>
+					<td>${Empleados.personases.nombre}</td>
+					<td>${Empleados.personases.apellido1} ${Empleados.personases.apellido2}</td>
+					<td>${Empleados.salario}</td>
+					<td><a href="edit?id=${Empleados.idempleados}">Modificar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a
+						href="delete?id=${Empleados.idempleados}">Eliminar</a></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</div>
-    </body>
+</body>
 </html>
