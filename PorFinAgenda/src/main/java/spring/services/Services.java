@@ -15,7 +15,7 @@ import spring.model.Empleados;
 @Transactional
 public class Services implements IService{
 
-	//	@Autowired
+		@Autowired
 		private Idatos datos;
 		
 		/*
