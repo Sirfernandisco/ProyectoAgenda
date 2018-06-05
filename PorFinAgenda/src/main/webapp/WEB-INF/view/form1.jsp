@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<spring:url value="/resources/css/estilos.css" var="estilos" />
+<spring:url value="/resources/css/otro.css" var="estilos" />
 <link href="${estilos}" rel="stylesheet" />
 <title>Lista de empleados</title>
 </head>
@@ -34,8 +34,8 @@
 					<td>${Empleados.codEmpleado}</td>
 					<td>${Empleados.personases.nombre}</td>
 					<td>${Empleados.personases.telefonoses.telefono}</td>
-			   	    <td>${Empleados.categorias.nombre}</td>
-				    <td>${Empleados.departamentos.nombre}</td>
+					<td>${Empleados.categorias.nombre}</td>
+					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.salario}</td>
 				</tr>
 			</c:forEach>
