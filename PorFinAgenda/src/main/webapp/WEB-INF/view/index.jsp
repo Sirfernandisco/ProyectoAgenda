@@ -16,16 +16,31 @@
     <title>Agenda RoneaWork</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Google Fonts -->
+<!--     Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <!-- Simple line Icon -->
+<!--     Simple line Icon -->
     <link rel="stylesheet" href="css/simple-line-icons.css">
-    <!-- Themify Icon -->
+<!--     Themify Icon -->
     <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Hover Effects -->
+<!--     Hover Effects -->
     <link rel="stylesheet" href="css/set1.css">
-    <!-- Main CSS -->
+<!--     Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+<%--     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> --%>
+<%--     <spring:url value="/resources/css/simple-line-icons.css" var="icons" /> --%>
+<%--     <spring:url value="/resources/css/themify-icons.css" var="themify" /> --%>
+<%--     <spring:url value="/resources/css/set1.css" var="set1" /> --%>
+<%--     <spring:url value="/resources/css/style.css" var="style" /> --%>
+    
+<!--     <link href="resources/css/bootstrap.css" rel="stylesheet" media="screen"> -->
+    
+    
+<%--     <link href="${bootstrap}" rel="stylesheet" media="screen"/> --%>
+<%--     <link href="${icons}" rel="stylesheet" /> --%>
+<%--     <link href="${themify}" rel="stylesheet" /> --%>
+<%--     <link href="${set1}" rel="stylesheet" /> --%>
+<%--     <link href="${style}" rel="stylesheet" /> --%>
 </head>
 
 <body>
