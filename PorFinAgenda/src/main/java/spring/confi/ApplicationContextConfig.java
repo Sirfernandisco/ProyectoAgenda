@@ -40,7 +40,7 @@ public class ApplicationContextConfig {
     
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-	    registry.addResourceHandler("/resources/**/*").addResourceLocations("/WEB-INF/view/");
+		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
 		//registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");	  
 	}
      
