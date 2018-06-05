@@ -30,7 +30,7 @@
 				<tr>
 					<td>${Empleados.idempleados}</td>
 					<td>${Empleados.codEmpleado}</td>
-			   	    <%-- <td>${Empleados.categorias.nombre}</td> --%>
+			   	    <td>${Categorias.nombre}</td>
 				    <%-- <td>${Empleados.departamentos.nombre}</td> --%>
 					<td>${Empleados.salario}</td>
 				</tr>
