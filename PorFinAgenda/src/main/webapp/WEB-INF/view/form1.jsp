@@ -52,11 +52,11 @@
 				<th>fechaAlta</th>
 			</tr>
 
-			<c:forEach var="lista" items="${lista}" varStatus="status">
+			<c:forEach var="Empleados" items="${lista}">
 				<tr>
 					<td>${Empleados.idempleados}</td>
-					<td>${Empleados.categorias}</td>
-					<td>${Empleados.departamentos}</td>
+					<td>${Empleados.categorias.nombre}</td>
+					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.codEmpleado}</td>
 					<td>${Empleados.salario}</td>
 					<td>${Empleados.fechaAlta}</td>
