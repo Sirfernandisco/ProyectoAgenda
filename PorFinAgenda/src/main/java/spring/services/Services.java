@@ -1,6 +1,6 @@
 package spring.services;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import spring.datos.Idatos;
 import spring.model.Empleados;
-import spring.model.Personas;
+
 
 @Service
 @Transactional
