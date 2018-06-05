@@ -37,10 +37,10 @@ public class Services implements IService{
 			return datos.mostrarEmpleados();
 		}
 
-//		@Override
-//		public User get(int id) {
-//			return userDAO.get(id);
-//		}
+		@Override
+		public Empleados get(String apellido1, String apellido2) {
+			return datos.get(apellido1, apellido2);
+		}
 //
 //		@Override
 //		public void saveOrUpdate(User user) {

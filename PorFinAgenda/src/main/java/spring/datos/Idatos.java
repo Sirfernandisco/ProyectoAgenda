@@ -9,7 +9,7 @@ public interface Idatos {
 	
 	public List<Empleados> mostrarEmpleados();
 	
-	public Empleados get(int id);
+	public Empleados get(String apellido1, String apellido2);
 	
 	//public void saveOrUpdate(User user);
 	
