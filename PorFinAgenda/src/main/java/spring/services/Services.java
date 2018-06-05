@@ -1,6 +1,7 @@
 package spring.services;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -31,8 +32,8 @@ public class Services implements IService{
 
 
 		@Override
-		public ArrayList<Empleados> mostrarEmpleados() {
-
+		public List<Empleados> mostrarEmpleados() {
+			
 			return datos.mostrarEmpleados();
 		}
 

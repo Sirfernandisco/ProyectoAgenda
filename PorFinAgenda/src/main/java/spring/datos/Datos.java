@@ -1,6 +1,7 @@
 package spring.datos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -27,9 +28,9 @@ public class Datos implements Idatos{
 
 	@Override
 	@Transactional
-	public ArrayList<Empleados> mostrarEmpleados() {
+	public List<Empleados> mostrarEmpleados() {
 		@SuppressWarnings("unchecked")
-		ArrayList<Empleados> listUser = (ArrayList<Empleados>) sessionFactory.getCurrentSession()
+		List<Empleados> listUser = (List<Empleados>) sessionFactory.getCurrentSession()
 				.createCriteria(Empleados.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 		System.out.println(listUser);

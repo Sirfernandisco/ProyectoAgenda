@@ -1,6 +1,6 @@
 package spring.control;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import spring.model.Cliente;
-
+import spring.model.Empleados;
 import spring.services.IService;
 
 
@@ -22,29 +21,29 @@ public class InicioController {
 	@Autowired
 	private IService userService;
 	
-	  @ModelAttribute("cliente")
-	  public Cliente getClienteObject() {
+	  @ModelAttribute("Empleados")
+	  public Empleados getClienteObject() {
 	      System.out.println("-- devuelvo un objeto vacio");
-	      return new Cliente();
+	      return new Empleados();
 	  }
 
-	  @RequestMapping("/")
+	  /*@RequestMapping("/")
 	  public String initForm() {
       System.out.println("--- metodo cliente");
 
 
      return "form1";
-	  }
+	  }*/
 	  
 	  // añadido para mostrar empleados falta modificar
-	/*	@RequestMapping("/")
+		@RequestMapping("/")
 		public ModelAndView handleRequest() throws Exception {
-			ArrayList<Empleados> listUsers = userService.mostrarEmpleados();
+			List<Empleados> listUsers = userService.mostrarEmpleados();
 			ModelAndView model = new ModelAndView("form1");
 			model.addObject("lista", listUsers);
 			return model;
 		}
-	  */
+	  
 
 //	  @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
 //	  public String processSubmit(
@@ -52,11 +51,11 @@ public class InicioController {
 //	          ModelMap model) {
 //	      System.out.println("--- metodo addcliente");
 //	      
-//	      /*
+//	      
 //	          model.addAttribute("nombre", cliente.getNombre());
 //	          model.addAttribute("password", cliente.getPassword());
 //	          model.addAttribute("id", cliente.getId());
-//	      */
+//	      
 //	      //En vez de guardar uno a uno... los guardo de golpe
 //	      //En el proximo JSP tendre que sacarlos como   cliente.nombre    ciente.id, etc.
 //	      System.out.println("--"+cliente);

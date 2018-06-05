@@ -1,12 +1,13 @@
 package spring.datos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import spring.model.Empleados;
 
 public interface Idatos {
 	
-	public ArrayList <Empleados> mostrarEmpleados();
+	public List<Empleados> mostrarEmpleados();
 	
 	//public User get(int id);
 	
