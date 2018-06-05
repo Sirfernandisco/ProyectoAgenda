@@ -9,4 +9,5 @@ public interface IService {
 	
 	public List<Empleados> mostrarEmpleados();
 
+	public Empleados get(String apellido1, String apellido2);
 }
