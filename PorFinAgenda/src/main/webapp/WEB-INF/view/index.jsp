@@ -18,6 +18,8 @@
     <spring:url value="/resources/css/style.css" var="estilos" />
 	<link href="${estilos}" rel="stylesheet" /> 
     
+    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
+	<link href="${bootstrap}" rel="stylesheet" />
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

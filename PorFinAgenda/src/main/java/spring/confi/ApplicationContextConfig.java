@@ -15,6 +15,7 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import spring.model.Categorias;
@@ -29,7 +30,7 @@ import spring.model.Telefonos;
 @Configuration
 @ComponentScan(basePackages="spring")
 @EnableTransactionManagement
-public class ApplicationContextConfig {
+public class ApplicationContextConfig extends WebMvcConfigurerAdapter{
 	
     @Bean(name = "viewResolver")
     public InternalResourceViewResolver getViewResolver() {
@@ -39,10 +40,9 @@ public class ApplicationContextConfig {
         return viewResolver;
     }
     
-
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-		//registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");	  
 	}
      
     
