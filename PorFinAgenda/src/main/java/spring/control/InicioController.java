@@ -50,9 +50,9 @@ public class InicioController {
 		
 		@RequestMapping("/buscar")
 		public ModelAndView buscador(HttpServletRequest request){
-			int idempleados = Integer.parseInt(request.getParameter("primer"));
+			String apellido1 = request.getParameter("primer");
 			//String apellido2 = request.getParameter("segundo");
-			Empleados empleado= userService.get(idempleados);
+			Empleados empleado= userService.get(apellido1);
 			ModelAndView model = new ModelAndView("ficha");
 			model.addObject("empleado", empleado);
 			return model;

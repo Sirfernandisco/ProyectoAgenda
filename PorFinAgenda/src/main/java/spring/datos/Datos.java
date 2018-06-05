@@ -54,8 +54,8 @@ public class Datos implements Idatos{
 
 	@Override
 	@Transactional
-	public Empleados get(int idempleados) {
-		String hql = "from Empleados where idempleados=" + idempleados;
+	public Empleados get(String idempleados) {
+		String hql = "from Empleados where a=" + idempleados;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		

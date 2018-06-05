@@ -39,7 +39,7 @@ public class Services implements IService{
 		}
 
 		@Override
-		public Empleados get(int idempleados) {
+		public Empleados get(String idempleados) {
 			return datos.get(idempleados);
 		}
 //

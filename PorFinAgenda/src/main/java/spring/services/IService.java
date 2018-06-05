@@ -10,5 +10,5 @@ public interface IService {
 	
 	public List<Empleados> mostrarEmpleados();
 
-	public Empleados get(int idempleados);
+	public Empleados get(String idempleados);
 }
