@@ -27,11 +27,11 @@
 <!--     Main CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-<%--     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> --%>
-<%--     <spring:url value="/resources/css/simple-line-icons.css" var="icons" /> --%>
-<%--     <spring:url value="/resources/css/themify-icons.css" var="themify" /> --%>
-<%--     <spring:url value="/resources/css/set1.css" var="set1" /> --%>
-<%--     <spring:url value="/resources/css/style.css" var="style" /> --%>
+<%--     <spring:url value="css/bootstrap.min.css" var="bootstrap" /> --%>
+<%--     <spring:url value="css/simple-line-icons.css" var="icons" /> --%>
+<%--     <spring:url value="css/themify-icons.css" var="themify" /> --%>
+<%--     <spring:url value="css/set1.css" var="set1" /> --%>
+<%--     <spring:url value="css/style.css" var="style" /> --%>
     
 <!--     <link href="resources/css/bootstrap.css" rel="stylesheet" media="screen"> -->
     

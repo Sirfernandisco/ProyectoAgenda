@@ -27,11 +27,11 @@
 <!--     Main CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-<%--     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> --%>
-<%--     <spring:url value="/resources/css/simple-line-icons.css" var="icons" /> --%>
-<%--     <spring:url value="/resources/css/themify-icons.css" var="themify" /> --%>
-<%--     <spring:url value="/resources/css/set1.css" var="set1" /> --%>
-<%--     <spring:url value="/resources/css/style.css" var="style" /> --%>
+<%--     <spring:url value="css/bootstrap.min.css" var="bootstrap" /> --%>
+<%--     <spring:url value="css/simple-line-icons.css" var="icons" /> --%>
+<%--     <spring:url value="css/themify-icons.css" var="themify" /> --%>
+<%--     <spring:url value="css/set1.css" var="set1" /> --%>
+<%--     <spring:url value="css/style.css" var="style" /> --%>
     
 <!--     <link href="resources/css/bootstrap.css" rel="stylesheet" media="screen"> -->
     
@@ -96,10 +96,10 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <form class="form-wrap mt-4">
+                                <form class="form-wrap mt-4" action="buscar" method="post">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <input type="text" placeholder="Primer Apellido" class="btn-group1">
-                                        <input type="text" placeholder="Segundo apellido" class="btn-group2">
+                                        <input type="text" placeholder="Primer Apellido" class="btn-group1" name="primer">
+                                        <input type="text" placeholder="Segundo apellido" class="btn-group2" name="segundo">
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                     </div>
                                 </form>
