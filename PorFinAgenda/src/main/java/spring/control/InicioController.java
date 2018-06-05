@@ -11,39 +11,40 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import spring.model.Cliente;
-import spring.model.Empleados;
-import spring.services.Services;
+
+import spring.services.IService;
+
 
 
 @Controller
 public class InicioController {
 	
 	@Autowired
-	private Services userService;
+	private IService userService;
 	
-//	  @ModelAttribute("cliente")
-//	  public Cliente getClienteObject() {
-//	      System.out.println("-- devuelvo un objeto vacio");
-//	      return new Cliente();
-//	  }
+	  @ModelAttribute("cliente")
+	  public Cliente getClienteObject() {
+	      System.out.println("-- devuelvo un objeto vacio");
+	      return new Cliente();
+	  }
 
-//	  @RequestMapping("/")
-//	  public String initForm() {
-//	      System.out.println("--- metodo cliente");
-//
-//
-//	      return "form1";
-//	  }
+	  @RequestMapping("/")
+	  public String initForm() {
+      System.out.println("--- metodo cliente");
+
+
+     return "form1";
+	  }
 	  
 	  // añadido para mostrar empleados falta modificar
-		@RequestMapping("/")
+	/*	@RequestMapping("/")
 		public ModelAndView handleRequest() throws Exception {
 			ArrayList<Empleados> listUsers = userService.mostrarEmpleados();
 			ModelAndView model = new ModelAndView("form1");
 			model.addObject("lista", listUsers);
 			return model;
 		}
-	  
+	  */
 
 //	  @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
 //	  public String processSubmit(

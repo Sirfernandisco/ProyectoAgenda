@@ -7,7 +7,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import spring.datos.Datos;
+
+import spring.datos.Idatos;
 import spring.model.Empleados;
 
 @Service
@@ -15,7 +16,7 @@ import spring.model.Empleados;
 public class Services implements IService{
 
 		@Autowired
-		private Datos datos;
+		private Idatos datos;
 		
 		/*
 		public UserServiceImpl(){
