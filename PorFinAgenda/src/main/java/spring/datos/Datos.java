@@ -6,6 +6,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,10 +30,10 @@ public class Datos implements Idatos{
 	@Override
 	@Transactional
 	public List<Empleados> mostrarEmpleados() {
+		Query query = sessionFactory.getCurrentSession().createQuery("from Empleados");
+		
 		@SuppressWarnings("unchecked")
-		List<Empleados> listUser = (List<Empleados>) sessionFactory.getCurrentSession()
-				.createCriteria(Empleados.class)
-				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+		List<Empleados> listUser = (List<Empleados>) query.list();
 		System.out.println(listUser);
 		return listUser;
 	}
@@ -51,21 +52,21 @@ public class Datos implements Idatos{
 //		sessionFactory.getCurrentSession().delete(userToDelete);
 //	}
 
-//	@Override
-//	@Transactional
-//	public User get(int id) {
-//		String hql = "from User where id=" + id;
-//		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-//		
-//		@SuppressWarnings("unchecked")
-//		List<User> listUser = (List<User>) query.list();
-//		
-//		if (listUser != null && !listUser.isEmpty()) {
-//			return listUser.get(0);
-//		}
-//		
-//		return null;
-//	}
+	@Override
+	@Transactional
+	public Empleados get(int id) {
+		String hql = "from User where id=" + id;
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<Empleados> listUser = (List<Empleados>) query.list();
+		
+		if (listUser != null && !listUser.isEmpty()) {
+			return listUser.get(0);
+		}
+		
+		return null;
+	}
 }
 
 
