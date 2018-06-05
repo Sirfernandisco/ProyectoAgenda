@@ -26,13 +26,8 @@
 				<th>Nombre y Apellidos</th>
 				<th>salario</th>
 			</tr>
-				<tr>
+				<tr items="${lista2}">
 					<td>${Empleados.idempleados}</td>
-					<td>${Empleados.categorias.nombre}</td>
-					<td>${Empleados.departamentos.nombre}</td>
-					<td>${Empleados.codEmpleado}</td>
-					<td>${Empleados.personases.nombre} ${Empleados.personases.apellido1} ${Empleados.personases.apellido2}</td>
-					<td>${Empleados.salario}</td>
 				</tr>
 		</table>
 	</div>

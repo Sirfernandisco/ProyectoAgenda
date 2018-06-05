@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import spring.model.Empleados;
+import spring.model.Personas;
 import spring.services.IService;
 
 
@@ -49,11 +50,11 @@ public class InicioController {
 		
 		@RequestMapping("/buscar")
 		public ModelAndView buscador(HttpServletRequest request){
-			String apellido1 = request.getParameter("primer");
-			String apellido2 = request.getParameter("segundo");
-			Empleados empleado= userService.get(apellido1, apellido2);
+			int idempleados = Integer.parseInt(request.getParameter("primer"));
+			//String apellido2 = request.getParameter("segundo");
+			Empleados empleado= userService.get(idempleados);
 			ModelAndView model = new ModelAndView("ficha");
-			model.addObject("Empleados", empleado);
+			model.addObject("lista2", empleado);
 			return model;
 		}
 	  

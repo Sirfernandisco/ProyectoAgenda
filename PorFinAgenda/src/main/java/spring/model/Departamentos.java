@@ -1,15 +1,11 @@
 package spring.model;
-// Generated 04-jun-2018 15:51:34 by Hibernate Tools 5.2.3.Final
+// Generated 05-jun-2018 15:59:11 by Hibernate Tools 5.2.3.Final
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -19,22 +15,14 @@ import javax.persistence.Table;
 @Table(name = "departamentos", catalog = "agenda")
 public class Departamentos implements java.io.Serializable {
 
-
-	private static final long serialVersionUID = 1L;
 	private Integer iddepartamento;
 	private String nombre;
-	private Set<Empleados> empleadoses = new HashSet<Empleados>(0);
 
 	public Departamentos() {
 	}
 
 	public Departamentos(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public Departamentos(String nombre, Set<Empleados> empleadoses) {
-		this.nombre = nombre;
-		this.empleadoses = empleadoses;
 	}
 
 	@Id
@@ -56,15 +44,6 @@ public class Departamentos implements java.io.Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "departamentos")
-	public Set<Empleados> getEmpleadoses() {
-		return this.empleadoses;
-	}
-
-	public void setEmpleadoses(Set<Empleados> empleadoses) {
-		this.empleadoses = empleadoses;
 	}
 
 }

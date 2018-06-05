@@ -54,8 +54,8 @@ public class Datos implements Idatos{
 
 	@Override
 	@Transactional
-	public Empleados get(String apellido1, String apellido2) {
-		String hql = "FROM Empleados AS e INNER JOIN Personas AS  p  ON e.idempleados=p.idEmpleado WHERE p.apellido1=" + apellido1+" AND apellido2=" + apellido2;
+	public Empleados get(int idempleados) {
+		String hql = "from Empleados where idempleados=" + idempleados;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		@SuppressWarnings("unchecked")

@@ -1,16 +1,12 @@
 package spring.model;
-// Generated 04-jun-2018 15:51:34 by Hibernate Tools 5.2.3.Final
+// Generated 05-jun-2018 15:59:11 by Hibernate Tools 5.2.3.Final
 
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -22,31 +18,29 @@ import javax.persistence.TemporalType;
 @Table(name = "empleados", catalog = "agenda")
 public class Empleados implements java.io.Serializable {
 
-
-	private static final long serialVersionUID = 1L;
 	private Integer idempleados;
-	private Categorias categorias;
-	private Departamentos departamentos;
 	private String codEmpleado;
 	private String salario;
 	private Date fechaAlta;
-	private Personas personases;
+	private int departamentosIddepartamento;
+	private int categoriasIdcategorias;
 
 	public Empleados() {
 	}
 
-	public Empleados(String codEmpleado) {
+	public Empleados(String codEmpleado, int departamentosIddepartamento, int categoriasIdcategorias) {
 		this.codEmpleado = codEmpleado;
+		this.departamentosIddepartamento = departamentosIddepartamento;
+		this.categoriasIdcategorias = categoriasIdcategorias;
 	}
 
-	public Empleados(Categorias categorias, Departamentos departamentos, String codEmpleado, String salario,
-			Date fechaAlta, Personas personases) {
-		this.categorias = categorias;
-		this.departamentos = departamentos;
+	public Empleados(String codEmpleado, String salario, Date fechaAlta, int departamentosIddepartamento,
+			int categoriasIdcategorias) {
 		this.codEmpleado = codEmpleado;
 		this.salario = salario;
 		this.fechaAlta = fechaAlta;
-		this.personases = personases;
+		this.departamentosIddepartamento = departamentosIddepartamento;
+		this.categoriasIdcategorias = categoriasIdcategorias;
 	}
 
 	@Id
@@ -59,26 +53,6 @@ public class Empleados implements java.io.Serializable {
 
 	public void setIdempleados(Integer idempleados) {
 		this.idempleados = idempleados;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idCategoria")
-	public Categorias getCategorias() {
-		return this.categorias;
-	}
-
-	public void setCategorias(Categorias categorias) {
-		this.categorias = categorias;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idDepartamento")
-	public Departamentos getDepartamentos() {
-		return this.departamentos;
-	}
-
-	public void setDepartamentos(Departamentos departamentos) {
-		this.departamentos = departamentos;
 	}
 
 	@Column(name = "codEmpleado", nullable = false, length = 45)
@@ -99,8 +73,8 @@ public class Empleados implements java.io.Serializable {
 		this.salario = salario;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "fechaAlta", length = 19)
+	@Temporal(TemporalType.DATE)
+	@Column(name = "fechaAlta", length = 10)
 	public Date getFechaAlta() {
 		return this.fechaAlta;
 	}
@@ -109,21 +83,22 @@ public class Empleados implements java.io.Serializable {
 		this.fechaAlta = fechaAlta;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "empleados")
-	public Personas getPersonases() {
-		return this.personases;
+	@Column(name = "departamentos_iddepartamento", nullable = false)
+	public int getDepartamentosIddepartamento() {
+		return this.departamentosIddepartamento;
 	}
 
-	public void setPersonases(Personas personases) {
-		this.personases = personases;
+	public void setDepartamentosIddepartamento(int departamentosIddepartamento) {
+		this.departamentosIddepartamento = departamentosIddepartamento;
 	}
 
-	@Override
-	public String toString() {
-		return "Empleados [idempleados=" + idempleados + ", categorias=" + categorias + ", departamentos="
-				+ departamentos + ", codEmpleado=" + codEmpleado + ", salario=" + salario + ", fechaAlta=" + fechaAlta
-				+ ", personases=" + personases + "]";
+	@Column(name = "categorias_idcategorias", nullable = false)
+	public int getCategoriasIdcategorias() {
+		return this.categoriasIdcategorias;
 	}
 
-	
+	public void setCategoriasIdcategorias(int categoriasIdcategorias) {
+		this.categoriasIdcategorias = categoriasIdcategorias;
+	}
+
 }
