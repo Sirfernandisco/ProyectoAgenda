@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -67,7 +67,7 @@
                                         <a class="nav-link" href="mostrar"><strong>Empleados</strong></a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"><strong>CategorÃ­a</strong></a>
+                                        <a class="nav-link" href="#"><strong>Categoría</strong></a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="#"><strong>Departamentos</strong></a>

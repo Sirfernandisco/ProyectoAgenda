@@ -2,8 +2,7 @@ package spring.model;
 // Generated 05-jun-2018 19:38:38 by Hibernate Tools 5.2.3.Final
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,7 +11,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,13 +24,15 @@ import javax.persistence.TemporalType;
 @Table(name = "empleados", catalog = "agenda")
 public class Empleados implements java.io.Serializable {
 
+
+	private static final long serialVersionUID = 1L;
 	private Integer idempleados;
 	private Categorias categorias;
 	private Departamentos departamentos;
 	private String codEmpleado;
 	private String salario;
 	private Date fechaAlta;
-	private Set<Personas> personases = new HashSet<Personas>(0);
+	private Personas personases ;
 
 	public Empleados() {
 	}
@@ -40,7 +42,7 @@ public class Empleados implements java.io.Serializable {
 	}
 
 	public Empleados(Categorias categorias, Departamentos departamentos, String codEmpleado, String salario,
-			Date fechaAlta, Set<Personas> personases) {
+			Date fechaAlta, Personas personases) {
 		this.categorias = categorias;
 		this.departamentos = departamentos;
 		this.codEmpleado = codEmpleado;
@@ -109,12 +111,12 @@ public class Empleados implements java.io.Serializable {
 		this.fechaAlta = fechaAlta;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empleados")
-	public Set<Personas> getPersonases() {
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "empleados")
+	public Personas getPersonases() {
 		return this.personases;
 	}
 
-	public void setPersonases(Set<Personas> personases) {
+	public void setPersonases(Personas personases) {
 		this.personases = personases;
 	}
 
