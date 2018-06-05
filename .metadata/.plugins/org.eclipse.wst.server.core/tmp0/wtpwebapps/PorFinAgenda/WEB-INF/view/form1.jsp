@@ -53,10 +53,10 @@
 			<c:forEach var="lista" items="${lista}" varStatus="status">
 				<tr>
 					<td>${status.index + 1}</td>
-					<td>${Empleados.departamentos}</td>
-					<td>${Empleados.categorias}</td>
-					<td><a href="edit?id=${Empleados.idempleados}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${Empleados.id}">Eliminar</a>
+					<td>${empleados.codEmpleado}</td>
+					<td>${empleados.salario}</td>
+					<td><a href="edit?id=${empleados.idempleados}">Modificar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${empleados.idempleados}">Eliminar</a>
 					</td>
 				</tr>
 			</c:forEach>
