@@ -1,11 +1,14 @@
 package spring.model;
-// Generated 05-jun-2018 15:59:11 by Hibernate Tools 5.2.3.Final
+// Generated 05-jun-2018 19:38:38 by Hibernate Tools 5.2.3.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -15,14 +18,15 @@ import javax.persistence.Table;
 @Table(name = "telefonos", catalog = "agenda")
 public class Telefonos implements java.io.Serializable {
 
-	private static final long serialVersionUID = 1L;
 	private Integer idtelefonos;
+	private Personas personas;
 	private String telefono;
 
 	public Telefonos() {
 	}
 
-	public Telefonos(String telefono) {
+	public Telefonos(Personas personas, String telefono) {
+		this.personas = personas;
 		this.telefono = telefono;
 	}
 
@@ -36,6 +40,16 @@ public class Telefonos implements java.io.Serializable {
 
 	public void setIdtelefonos(Integer idtelefonos) {
 		this.idtelefonos = idtelefonos;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idPersona")
+	public Personas getPersonas() {
+		return this.personas;
+	}
+
+	public void setPersonas(Personas personas) {
+		this.personas = personas;
 	}
 
 	@Column(name = "telefono", length = 45)
