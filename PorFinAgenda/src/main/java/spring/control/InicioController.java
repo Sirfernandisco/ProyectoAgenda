@@ -2,6 +2,9 @@ package spring.control;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -40,6 +43,17 @@ public class InicioController {
 			List<Empleados> listUsers = userService.mostrarEmpleados();
 			ModelAndView model = new ModelAndView("form1");
 			model.addObject("lista", listUsers);
+			return model;
+		}
+		
+		
+		@RequestMapping("/buscar")
+		public ModelAndView buscador(HttpServletRequest request){
+			String apellido1 = request.getParameter("primer");
+			String apellido2 = request.getParameter("segundo");
+			Empleados empleado= userService.get(apellido1, apellido2);
+			ModelAndView model = new ModelAndView("ficha");
+			model.addObject("Empleados", empleado);
 			return model;
 		}
 	  
