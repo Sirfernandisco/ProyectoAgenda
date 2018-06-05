@@ -63,4 +63,11 @@ public class Telefonos implements java.io.Serializable {
 		this.telefono = telefono;
 	}
 
+	@Override
+	public String toString() {
+		return "Telefonos [idtelefonos=" + idtelefonos + ", personas=" + personas + ", telefono=" + telefono + "]";
+	}
+
+	
+	
 }

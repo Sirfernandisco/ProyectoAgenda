@@ -80,4 +80,11 @@ public class Categorias implements java.io.Serializable {
 		this.empleadoses = empleadoses;
 	}
 
+	@Override
+	public String toString() {
+		return "Categorias [idcategorias=" + idcategorias + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
+	}
+	
+	
+
 }

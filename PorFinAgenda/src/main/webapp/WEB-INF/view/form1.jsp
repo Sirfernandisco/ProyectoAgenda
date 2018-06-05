@@ -21,6 +21,8 @@
 			<tr>
 				<th>idempleados</th>
 				<th>codEmpleado</th>
+				<th>nombre</th>
+				<th>telefono</th>
 				<th>nombre categoria</th>
 				<th>nombre departamento</th>
 				<th>salario</th>
@@ -30,8 +32,10 @@
 				<tr>
 					<td>${Empleados.idempleados}</td>
 					<td>${Empleados.codEmpleado}</td>
-			   	    <td>${Categorias.nombre}</td>
-				    <%-- <td>${Empleados.departamentos.nombre}</td> --%>
+					<td>${Empleados.personases.nombre}</td>
+					<td>${Empleados.personases.telefonoses.telefono}</td>
+			   	    <td>${Empleados.categorias.nombre}</td>
+				    <td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.salario}</td>
 				</tr>
 			</c:forEach>

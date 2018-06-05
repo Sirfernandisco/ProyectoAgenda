@@ -143,4 +143,13 @@ public class Personas implements java.io.Serializable {
 		this.telefonoses = telefonoses;
 	}
 
+	@Override
+	public String toString() {
+		return "Personas [idpersonas=" + idpersonas + ", empleados=" + empleados + ", nombre=" + nombre + ", apellido1="
+				+ apellido1 + ", apellido2=" + apellido2 + ", dni=" + dni + ", fechaNacimiento=" + fechaNacimiento
+				+ ", direccioneses=" + direccioneses + ", telefonoses=" + telefonoses + "]";
+	}
+
+	
+	
 }
