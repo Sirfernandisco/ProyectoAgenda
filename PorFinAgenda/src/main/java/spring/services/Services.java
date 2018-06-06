@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import spring.datos.Idatos;
 import spring.model.Empleados;
+import spring.model.Personas;
 
 
 @Service
@@ -39,8 +40,8 @@ public class Services implements IService{
 		}
 
 		@Override
-		public Empleados get(String idempleados) {
-			return datos.get(idempleados);
+		public Personas get(String apellido) {
+			return datos.get(apellido);
 		}
 //
 //		@Override

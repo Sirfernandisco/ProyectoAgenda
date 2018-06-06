@@ -4,11 +4,12 @@ package spring.services;
 import java.util.List;
 
 import spring.model.Empleados;
+import spring.model.Personas;
 
 
 public interface IService {
 	
 	public List<Empleados> mostrarEmpleados();
 
-	public Empleados get(String idempleados);
+	public Personas get(String apellido);
 }

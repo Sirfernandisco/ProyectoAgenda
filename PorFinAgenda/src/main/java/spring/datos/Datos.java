@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import spring.model.Empleados;
+import spring.model.Personas;
 
 @Repository
 public class Datos implements Idatos{
@@ -54,15 +55,15 @@ public class Datos implements Idatos{
 
 	@Override
 	@Transactional
-	public Empleados get(String idempleados) {
-		String hql = "from Empleados where a=" + idempleados;
-		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+	public Personas get(String apellido1) {
+		String hql = "from Personas where p.apellido1="+ apellido1;
+		Query query = sessionFactory.getCurrentSession().createSQLQuery(hql);
 		
 		
-		Empleados empleado = (Empleados) query.uniqueResult();
+		Personas persona = (Personas) query.uniqueResult();
 		
 		
-		return empleado;
+		return persona;
 	}
 }
 

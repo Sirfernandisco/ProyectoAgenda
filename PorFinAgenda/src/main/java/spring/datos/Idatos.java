@@ -4,13 +4,14 @@ package spring.datos;
 import java.util.List;
 
 import spring.model.Empleados;
+import spring.model.Personas;
 
 
 public interface Idatos {
 	
 	public List<Empleados> mostrarEmpleados();
 	
-	public Empleados get(String idempleados);
+	public Personas get(String apellido);
 	
 	//public void saveOrUpdate(User user);
 	

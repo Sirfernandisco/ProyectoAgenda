@@ -52,9 +52,9 @@ public class InicioController {
 		public ModelAndView buscador(HttpServletRequest request){
 			String apellido1 = request.getParameter("primer");
 			//String apellido2 = request.getParameter("segundo");
-			Empleados empleado= userService.get(apellido1);
+			Personas persona= userService.get(apellido1);
 			ModelAndView model = new ModelAndView("ficha");
-			model.addObject("empleado", empleado);
+			model.addObject("persona", persona);
 			return model;
 		}
 	  
