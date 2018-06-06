@@ -63,8 +63,8 @@ public class Services implements IService{
 		}
 
 		@Override
-		public void borrarEmpleado(int id) {
-			datos.borrarEmpleado(id);
+		public void borrarEmpleado(int id,String cod) {
+			datos.borrarEmpleado(id, cod);
 			
 		}
 		

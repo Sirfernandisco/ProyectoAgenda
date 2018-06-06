@@ -84,14 +84,15 @@ public class InicioController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView saveUser(@ModelAttribute Empleados user) {
 		userService.saveOrUpdate(user);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/mostrar");
 	}
 	
 	
 	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
 	public ModelAndView borrarEmpleado(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("id"));
-		userService.borrarEmpleado(id);
+		String cod = request.getParameter("codEmpleado");
+		userService.borrarEmpleado(id,cod);
 		return new ModelAndView("redirect:/mostrar");		
 	}
 

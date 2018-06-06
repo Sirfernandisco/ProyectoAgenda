@@ -77,10 +77,11 @@ public class Datos implements Idatos{
 	}
 
 	@Override
-	public void borrarEmpleado(int id) {
+	public void borrarEmpleado(int id,String cod) {
 		
 		Empleados borrar = new Empleados();
 		borrar.setIdempleados(id);
+		borrar.setCodEmpleado(cod);
 		sessionFactory.getCurrentSession().delete(borrar);
 			
 	}
