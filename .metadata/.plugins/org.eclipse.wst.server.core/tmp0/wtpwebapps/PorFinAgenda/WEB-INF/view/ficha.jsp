@@ -78,7 +78,7 @@
 			</strong></li>
 
 		</ul>
-
+		<a href="http://localhost:8080/Spring11-MVCHibernate/">Volver a la pagina de inicio</a>
 
 	</div>
 </body>

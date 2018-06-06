@@ -13,7 +13,7 @@
 
 	<div align="center">
 		<h1>Datos de la persona</h1>
-	
+
 
 		<table border="1">
 			<tr>
@@ -26,24 +26,25 @@
 				<th>Localidad</th>
 				<th>Provincia</th>
 				<th>idEmpleado</th>
-				
+
 			</tr>
 
-			
-				<tr>
-					<td>${persona.idpersonas}</td>
-					<td>${persona.nombre} ${persona.apellido1} ${persona.apellido2}</td>
-					<td>${persona.dni}</td>
-					<td>${persona.fechaNacimiento}</td>
-					<td>${persona.telefonoses.telefono}</td>
-					<td>${persona.direccioneses.direccion}</td>
-					<td>${persona.direccioneses.localidad}</td>
-					<td>${persona.direccioneses.provincia}</td>
-					<td>${persona.empleados.idempleados}</td>
-					<td><a href="detalles?id=${persona.empleados.idempleados}">Detalles</a>
-					</td>
-				</tr>
-			
+
+			<tr>
+				<td>${persona.idpersonas}</td>
+				<td>${persona.nombre}${persona.apellido1} ${persona.apellido2}</td>
+				<td>${persona.dni}</td>
+				<td>${persona.fechaNacimiento}</td>
+				<td>${persona.telefonoses.telefono}</td>
+				<td>${persona.direccioneses.direccion}</td>
+				<td>${persona.direccioneses.localidad}</td>
+				<td>${persona.direccioneses.provincia}</td>
+				<td>${persona.empleados.idempleados}</td>
+				<td><a href="detalles?id=${persona.empleados.idempleados}">Detalles</a>
+				<td><a href="http://localhost:8080/Spring11-MVCHibernate/">Volver</a>
+				</td>
+			</tr>
+
 
 		</table>
 	</div>
