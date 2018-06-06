@@ -35,7 +35,6 @@ public class Datos implements Idatos{
 		
 		@SuppressWarnings("unchecked")
 		List<Empleados> listUser = (List<Empleados>) query.list();
-		System.out.println(listUser);
 		return listUser;
 	}
 
