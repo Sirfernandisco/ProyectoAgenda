@@ -6,12 +6,18 @@ Author: Surjith S M
 /* ==============================================================
    GLOBAL STYLES
    ============================================================== */
+   
+   
+   
 body {
-  font-family: 'Roboto', sans-serif; }
-
+  font-family: 'Roboto', sans-serif; 
+  background: url(../images/b2.jpeg) no-repeat;
+  	 background-size: cover;
+  	}
+  
 h1 {
   font-size: 72px;
-  color: #fff;
+  color: silver;
   font-weight: 300; }
   @media (max-width: 1200px) {
     h1 {
@@ -184,7 +190,7 @@ p {
   text-align: center; }
 
 .slider-content_wrap h5 {
-  color: #909090;
+  color: silver;
   font-weight: 400;
   margin: 24px 0; }
 

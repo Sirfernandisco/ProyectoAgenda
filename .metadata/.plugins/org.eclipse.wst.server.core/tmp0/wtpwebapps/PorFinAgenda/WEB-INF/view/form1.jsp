@@ -12,7 +12,7 @@
 <body>
 
 	<div align="center">
-		<h1>LISTADO DE EMPLEADOS</h1>
+		<h1 id="ho">LISTADO DE EMPLEADOS</h1>
 		<h3>
 			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
@@ -26,6 +26,7 @@
 				<th>Categoria</th>
 				<th>Departamento</th>
 				<th>Salario</th>
+				<th>opciones</th>
 			</tr>
 
 			<c:forEach var="Empleados" items="${lista}">
