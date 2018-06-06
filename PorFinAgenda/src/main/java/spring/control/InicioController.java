@@ -65,6 +65,15 @@ public class InicioController {
 			return model;
 		}
 	}
+	
+	@RequestMapping(value = "/detalles", method = RequestMethod.GET)
+	public ModelAndView deleteUser(HttpServletRequest request) {
+		int id = Integer.parseInt(request.getParameter("id"));
+		Empleados empleado=userService.getEmpleado(id);
+		ModelAndView model = new ModelAndView("ficha");
+		model.addObject("empleado", empleado);
+		return model;		
+	}
 
 	// @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
 	// public String processSubmit(
