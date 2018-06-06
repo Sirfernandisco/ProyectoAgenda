@@ -17,5 +17,5 @@ public interface IService {
 	
 	public void saveOrUpdate(Empleados Empleado);
 	
-//	public void delete(int id);
+	public void borrarEmpleado(int id);
 }

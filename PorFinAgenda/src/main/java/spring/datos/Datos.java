@@ -75,6 +75,14 @@ public class Datos implements Idatos{
 		Empleados empleado = (Empleados) query.uniqueResult();
 		return empleado;
 	}
+
+	@Override
+	public void borrarEmpleado(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 }
 
 
