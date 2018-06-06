@@ -86,7 +86,7 @@ public class InicioController {
 	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
 	public ModelAndView borrarEmpleado(HttpServletRequest request) {
 		int userId = Integer.parseInt(request.getParameter("id"));
-		userService.delete(userId);
+		userService.borrarEmpleado(userId);
 		return new ModelAndView("redirect:/mostrar");		
 	}
 	
