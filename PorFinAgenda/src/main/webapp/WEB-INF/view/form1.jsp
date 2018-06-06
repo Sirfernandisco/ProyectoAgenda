@@ -40,7 +40,7 @@
 					<td>${Empleados.categorias.nombre}</td>
 					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.salario}</td>
-					<td><a href="detail?id=${user.id}">Detalles</a>
+					<td><a href="detalles?id=${Empleados.idempleados}">Detalles</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=${user.id}">Modificar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${user.id}">Eliminar</a>
 					</td>
