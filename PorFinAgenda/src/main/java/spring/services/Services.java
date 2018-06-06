@@ -43,13 +43,13 @@ public class Services implements IService{
 		public Personas get(String apellido) {
 			return datos.get(apellido);
 		}
-//
-//		@Override
-//		public void saveOrUpdate(User user) {
-//			userDAO.saveOrUpdate(user);
-//
-//		}
-//
+
+		@Override
+		public void saveOrUpdate(Empleados Empleado) {
+			datos.saveOrUpdate(Empleado);
+
+		}
+
 //		@Override
 //		public void delete(int id) {
 //			userDAO.delete(id);

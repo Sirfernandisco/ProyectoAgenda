@@ -39,11 +39,11 @@ public class Datos implements Idatos{
 		return listUser;
 	}
 
-//	@Override
-//	@Transactional
-//	public void saveOrUpdate(User user) {
-//		sessionFactory.getCurrentSession().saveOrUpdate(user);
-//	}
+	@Override
+	@Transactional
+	public void saveOrUpdate(Empleados Empleado) {
+		sessionFactory.getCurrentSession().saveOrUpdate(Empleado);
+	}
 
 //	@Override
 //	@Transactional

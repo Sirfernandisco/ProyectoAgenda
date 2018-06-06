@@ -5,5 +5,4 @@ INDEX VERSION 1.3+C:\Users\admin\Documents\GitHub\ProyectoAgenda\.metadata\.plug
 3389763669.index
 1237086109.index
 2995339032.index
-2313221678.index
 3040715349.index

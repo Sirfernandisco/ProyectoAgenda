@@ -15,7 +15,7 @@ public interface Idatos {
 	
 	public Empleados getEmpleado(int id);
 	
-	//public void saveOrUpdate(User user);
+	public void saveOrUpdate(Empleados empleado);
 	
 	//public void delete(int id);
 

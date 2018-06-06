@@ -14,4 +14,8 @@ public interface IService {
 	public Personas get(String apellido);
 	
 	public Empleados getEmpleado(int id);
+	
+	public void saveOrUpdate(Empleados Empleado);
+	
+//	public void delete(int id);
 }

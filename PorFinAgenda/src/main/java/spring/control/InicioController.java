@@ -74,6 +74,13 @@ public class InicioController {
 		model.addObject("empleado", empleado);
 		return model;		
 	}
+	
+	@RequestMapping(value = "/new", method = RequestMethod.GET)
+	public ModelAndView newUser() {
+		ModelAndView model = new ModelAndView("form1");
+		model.addObject("user", new Empleados());
+		return model;		
+	}
 
 	// @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
 	// public String processSubmit(
