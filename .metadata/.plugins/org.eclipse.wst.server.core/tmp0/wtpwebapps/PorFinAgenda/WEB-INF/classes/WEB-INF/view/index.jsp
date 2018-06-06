@@ -98,11 +98,9 @@
 						<div class="row d-flex justify-content-center">
 							<div class="col-md-10">
 								<form class="form-wrap mt-4" method="post" action="buscar">
-									<div class="btn-group" role="group" aria-label="Basic example">
+									<div class="btn-group" role="group" aria-label="Basic example" style="padding-left: 250px">
 										<input type="text" placeholder="Primer Apellido"
-											class="btn-group1" name="primer"> <input type="text"
-											placeholder="Segundo apellido" class="btn-group2"
-											name="segundo">
+											class="btn-group1" name="primer" >
 										<button type="submit" class="btn-form">SEARCH</button>
 									</div>
 								</form>

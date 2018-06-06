@@ -17,80 +17,79 @@ import spring.model.Empleados;
 import spring.model.Personas;
 import spring.services.IService;
 
-
-
 @Controller
 public class InicioController {
-	
+
 	@Autowired
 	private IService userService;
-	
-	  @ModelAttribute("Empleados")
-	  public Empleados getClienteObject() {
-	      System.out.println("-- devuelvo un objeto vacio");
-	      return new Empleados();
-	  }
 
-	  @RequestMapping("/")
-	  public String initForm() {
-    
-     return "index";
-	  }
-	  
-	  
-	  // añadido para mostrar empleados falta modificar
-		@RequestMapping("/mostrar")
-		public ModelAndView handleRequest() throws Exception {
-			List<Empleados> listUsers = userService.mostrarEmpleados();
-			ModelAndView model = new ModelAndView("form1");
-			model.addObject("lista", listUsers);
-			return model;
-		}
-		
-		
-		@RequestMapping("/buscar")
-		public ModelAndView buscador(HttpServletRequest request){
-			String apellido1 = request.getParameter("primer");
-			//String apellido2 = request.getParameter("segundo");
-			Personas persona= userService.get(apellido1);
-			if (persona==null){
+	@ModelAttribute("Empleados")
+	public Empleados getClienteObject() {
+		System.out.println("-- devuelvo un objeto vacio");
+		return new Empleados();
+	}
+
+	@RequestMapping("/")
+	public String initForm() {
+
+		return "index";
+	}
+
+	// añadido para mostrar empleados falta modificar
+	@RequestMapping("/mostrar")
+	public ModelAndView handleRequest() throws Exception {
+		List<Empleados> listUsers = userService.mostrarEmpleados();
+		ModelAndView model = new ModelAndView("form1");
+		model.addObject("lista", listUsers);
+		return model;
+	}
+
+	@RequestMapping("/buscar")
+	public ModelAndView buscador(HttpServletRequest request) {
+
+		Personas persona;
+		String apellido1 = request.getParameter("primer");
+		// String apellido2 = request.getParameter("segundo");
+		if (apellido1 != "") {
+			persona = userService.get(apellido1);
+			if (persona == null) {
 				ModelAndView model = new ModelAndView("noEncontrado");
 				return model;
+			} else {
+				ModelAndView model = new ModelAndView("buscadorPersona");
+				model.addObject("persona", persona);
+				return model;
 			}
-			else{
-			ModelAndView model = new ModelAndView("buscadorPersona");
-			model.addObject("persona", persona);
+		} else {
+			ModelAndView model = new ModelAndView("noEncontrado");
 			return model;
-			}
-			
 		}
-	  
+	}
 
-//	  @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
-//	  public String processSubmit(
-//	          @ModelAttribute("cliente") Cliente cliente,
-//	          ModelMap model) {
-//	      System.out.println("--- metodo addcliente");
-//	      
-//	      
-//	          model.addAttribute("nombre", cliente.getNombre());
-//	          model.addAttribute("password", cliente.getPassword());
-//	          model.addAttribute("id", cliente.getId());
-//	      
-//	      //En vez de guardar uno a uno... los guardo de golpe
-//	      //En el proximo JSP tendre que sacarlos como   cliente.nombre    ciente.id, etc.
-//	      System.out.println("--"+cliente);
-//	      model.addAttribute(cliente);
-//	      return "form2";
-//	  }
-	  
-	  
-	  //Tambien podria usar
-	  /*
-	   public ModelAndView processSubmit(@ModelAttribute("cliente") Cliente cliente, BindingResult result){
-	       ModelAndView mv = new ModelAndView();
-	       mv.addObject("cliente", cliente);  
-	       return mv;
-	  */
+	// @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
+	// public String processSubmit(
+	// @ModelAttribute("cliente") Cliente cliente,
+	// ModelMap model) {
+	// System.out.println("--- metodo addcliente");
+	//
+	//
+	// model.addAttribute("nombre", cliente.getNombre());
+	// model.addAttribute("password", cliente.getPassword());
+	// model.addAttribute("id", cliente.getId());
+	//
+	// //En vez de guardar uno a uno... los guardo de golpe
+	// //En el proximo JSP tendre que sacarlos como cliente.nombre ciente.id,
+	// etc.
+	// System.out.println("--"+cliente);
+	// model.addAttribute(cliente);
+	// return "form2";
+	// }
+
+	// Tambien podria usar
+	/*
+	 * public ModelAndView processSubmit(@ModelAttribute("cliente") Cliente
+	 * cliente, BindingResult result){ ModelAndView mv = new ModelAndView();
+	 * mv.addObject("cliente", cliente); return mv;
+	 */
 
 }
