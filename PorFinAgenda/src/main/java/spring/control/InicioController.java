@@ -67,7 +67,7 @@ public class InicioController {
 	}
 	
 	@RequestMapping(value = "/detalles", method = RequestMethod.GET)
-	public ModelAndView deleteUser(HttpServletRequest request) {
+	public ModelAndView buscarIdEmpleado(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		Empleados empleado=userService.getEmpleado(id);
 		ModelAndView model = new ModelAndView("ficha");
@@ -81,7 +81,16 @@ public class InicioController {
 		model.addObject("user", new Empleados());
 		return model;		
 	}
-
+	
+	
+	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
+	public ModelAndView borrarEmpleado(HttpServletRequest request) {
+		int userId = Integer.parseInt(request.getParameter("id"));
+		userService.delete(userId);
+		return new ModelAndView("redirect:/mostrar");		
+	}
+	
+	
 	// @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
 	// public String processSubmit(
 	// @ModelAttribute("cliente") Cliente cliente,
