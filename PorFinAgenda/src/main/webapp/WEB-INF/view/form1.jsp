@@ -19,13 +19,13 @@
 
 		<table border="1">
 			<tr>
-				<th>idempleados</th>
+				<th>id</th>
 				<th>codEmpleado</th>
-				<th>nombre</th>
-				<th>telefono</th>
-				<th>nombre categoria</th>
-				<th>nombre departamento</th>
-				<th>salario</th>
+				<th>Nombre</th>
+				<th>Telefono</th>
+				<th>Categoria</th>
+				<th>Departamento</th>
+				<th>Salario</th>
 			</tr>
 
 			<c:forEach var="Empleados" items="${lista}">
