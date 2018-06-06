@@ -19,8 +19,8 @@
 <spring:url value="/resources/css/style.css" var="estilos" />
 <link href="${estilos}" rel="stylesheet" />
 
-     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> 
- 	<link href="${bootstrap}" rel="stylesheet" /> 
+<spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
+<link href="${bootstrap}" rel="stylesheet" />
 
 <spring:url value="/resources/css/simple-line-icons.css" var="line" />
 <link href="${line}" rel="stylesheet" />
@@ -103,9 +103,7 @@
 											class="btn-group1" name="primer"> <input type="text"
 											placeholder="Segundo apellido" class="btn-group2"
 											name="segundo">
-										<button type="submit" class="btn-form">
-												SEARCH
-										</button>
+										<button type="submit" class="btn-form">SEARCH</button>
 									</div>
 								</form>
 								<div class="slider-link"></div>
@@ -121,15 +119,11 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="copyright">
-						<p>Copyright &copy; 2018 AgendaEmpresarial. All rights reserved</p>
+						<p>Copyright &copy; 2018 AgendaEmpresarial. All rights
+							reserved</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-
-
-
-
-
 </html>
