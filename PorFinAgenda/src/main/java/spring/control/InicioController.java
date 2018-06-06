@@ -53,9 +53,16 @@ public class InicioController {
 			String apellido1 = request.getParameter("primer");
 			//String apellido2 = request.getParameter("segundo");
 			Personas persona= userService.get(apellido1);
+			if (persona==null){
+				ModelAndView model = new ModelAndView("noEncontrado");
+				return model;
+			}
+			else{
 			ModelAndView model = new ModelAndView("buscadorPersona");
 			model.addObject("persona", persona);
 			return model;
+			}
+			
 		}
 	  
 
