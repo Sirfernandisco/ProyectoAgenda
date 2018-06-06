@@ -848,3 +848,11 @@
 2018-06-06 12:54:00,768 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2018-06-06 12:54:00,769 [Worker-424] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-06-06 12:54:00,769 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\admin\Documents\GitHub\ProyectoAgenda\PorFinAgenda\src\test\resources
+2018-06-06 12:57:11,354 [Worker-424] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-06-06 12:57:11,355 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-06-06 12:57:11,357 [Worker-424] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-06-06 12:57:11,357 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\admin\Documents\GitHub\ProyectoAgenda\PorFinAgenda\src\test\resources
+2018-06-06 13:20:14,758 [Worker-424] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-06-06 13:20:14,758 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-06-06 13:20:14,758 [Worker-424] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-06-06 13:20:14,758 [Worker-424] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\admin\Documents\GitHub\ProyectoAgenda\PorFinAgenda\src\test\resources
