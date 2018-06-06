@@ -81,6 +81,7 @@ public class Datos implements Idatos{
 		
 		Empleados borrar = new Empleados();
 		borrar.setIdempleados(id);
+		borrar.setCodEmpleado("111");
 		sessionFactory.getCurrentSession().delete(borrar);
 			
 	}
