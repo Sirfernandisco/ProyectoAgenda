@@ -78,8 +78,11 @@ public class Datos implements Idatos{
 
 	@Override
 	public void borrarEmpleado(int id) {
-		// TODO Auto-generated method stub
 		
+		Empleados borrar = new Empleados();
+		borrar.setIdempleados(id);
+		sessionFactory.getCurrentSession().delete(borrar);
+			
 	}
 	
 	
