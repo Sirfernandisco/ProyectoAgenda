@@ -25,7 +25,6 @@ public class InicioController {
 
 	@ModelAttribute("Empleados")
 	public Empleados getClienteObject() {
-		System.out.println("-- devuelvo un objeto vacio");
 		return new Empleados();
 	}
 

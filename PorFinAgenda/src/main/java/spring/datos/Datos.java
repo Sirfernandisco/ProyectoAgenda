@@ -5,7 +5,8 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-
+import org.apache.commons.logging. Log;
+import org.apache.commons.logging. LogFactory;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,9 @@ import spring.model.Personas;
 
 @Repository
 public class Datos implements Idatos{
+	
+	static Log log = LogFactory.getLog(Datos.class.getName());
+	
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -31,18 +35,23 @@ public class Datos implements Idatos{
 	@Override
 	@Transactional
 	public List<Empleados> mostrarEmpleados() {
-		Query query = sessionFactory.getCurrentSession().createQuery("from Empleados");
 		
+		
+		Query query = sessionFactory.getCurrentSession().createQuery("from Empleados");
 		@SuppressWarnings("unchecked")
 		List<Empleados> listUser = (List<Empleados>) query.list();
-		System.out.println(listUser);
+		log.info("Listado Empleados");
+
+		
 		return listUser;
+		
 	}
 
 	@Override
 	@Transactional
 	public void saveOrUpdate(Empleados Empleado) {
 		sessionFactory.getCurrentSession().saveOrUpdate(Empleado);
+		log.info("Guardar modificar Empleados");
 	}
 
 //	@Override
@@ -62,8 +71,7 @@ public class Datos implements Idatos{
 		query.setParameter("apellido1", apellido1+"%");
 		
 		Personas persona = (Personas) query.uniqueResult();
-		
-		
+		log.info("Busca una Persona por su primer apellido y la devuelve ");
 		return persona;
 	}
 	
@@ -73,6 +81,7 @@ public class Datos implements Idatos{
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("id", id);
 		Empleados empleado = (Empleados) query.uniqueResult();
+		log.info("Busca un Empleado por su primer apellido ");
 		return empleado;
 	}
 
@@ -83,6 +92,7 @@ public class Datos implements Idatos{
 		borrar.setIdempleados(id);
 		borrar.setCodEmpleado(cod);
 		sessionFactory.getCurrentSession().delete(borrar);
+		log.info("Borrar Empleado ");
 			
 	}
 	
