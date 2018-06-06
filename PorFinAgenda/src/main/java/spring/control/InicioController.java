@@ -82,6 +82,12 @@ public class InicioController {
 		return model;		
 	}
 	
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public ModelAndView saveUser(@ModelAttribute Empleados user) {
+		userService.saveOrUpdate(user);
+		return new ModelAndView("redirect:/");
+	}
+	
 	
 	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
 	public ModelAndView borrarEmpleado(HttpServletRequest request) {
