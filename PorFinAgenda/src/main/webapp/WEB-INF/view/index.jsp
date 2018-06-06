@@ -104,8 +104,7 @@
 											placeholder="Segundo apellido" class="btn-group2"
 											name="segundo">
 										<button type="submit" class="btn-form">
-											<span class="icon-magnifier search-icon"></span>SEARCH<i
-												class="pe-7s-angle-right"></i>
+												SEARCH
 										</button>
 									</div>
 								</form>
@@ -131,22 +130,6 @@
 
 
 
-	<script>
-		$(window).scroll(function() {
-			// 100 = The point you would like to fade the nav in.
 
-			if ($(window).scrollTop() > 100) {
-
-				$('.fixed').addClass('is-sticky');
-
-			} else {
-
-				$('.fixed').removeClass('is-sticky');
-
-			}
-			;
-		});
-	</script>
-</body>
 
 </html>
