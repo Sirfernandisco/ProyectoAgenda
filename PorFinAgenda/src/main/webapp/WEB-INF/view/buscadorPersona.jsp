@@ -13,9 +13,6 @@
 
 	<div align="center">
 		<h1>Datos de la persona</h1>
-		<br/>
-		<br/>
-		<br/>
 		<!-- <h3>
 			 Persona
 		</h3>
