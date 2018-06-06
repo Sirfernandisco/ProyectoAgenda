@@ -5,23 +5,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<spring:url value="/resources/css/otro.css" var="estilos" />
+<spring:url value="/resources/css/otro2.css" var="estilos" />
 <link href="${estilos}" rel="stylesheet" />
 <title>Lista de empleados</title>
 </head>
 <body>
 
-	<div align="center" style="color: black">
+	<div align="center">
 		<h1>Todos los detalles de un empleado</h1>
 	</div>
-	<div style="color: black">
-		<br/>
-		<br/>
+	<div style="padding-left: 800px;border-left-style: solid;border-left-width: 0px;">
+		<br /> <br />
 		<h3>Detalles de empleado</h3>
 		<ul>
-			<li>idPersona : <strong> ${empleado.personases.idpersonas}</strong></li>
-			<li>Nombre y Apellidos : <strong> ${empleado.personases.nombre}
-					${persona.apellido1} ${empleado.personases.apellido2}</strong></li>
+			<li>idPersona : <strong>
+					${empleado.personases.idpersonas}</strong></li>
+			<li>Nombre y Apellidos : <strong>
+					${empleado.personases.nombre} ${persona.apellido1}
+					${empleado.personases.apellido2}</strong></li>
 			<li>DNI : <strong>${empleado.personases.dni}</strong></li>
 			<li>Fecha Nacimiento :<strong>${empleado.personases.fechaNacimiento}
 			</strong>
@@ -36,13 +37,11 @@
 
 		<h3>Empleado</h3>
 		<ul>
-			<li>idEmpleado : <strong>${empleado.idempleados}
-			</strong></li>
+			<li>idEmpleado : <strong>${empleado.idempleados} </strong></li>
 			<li>Código de Empleado : <strong>${empleado.codEmpleado}
 			</strong></li>
 			<li>Salario : <strong>${empleado.salario} </strong></li>
-			<li>Fecha de alta: <strong>${empleado.fechaAlta}
-			</strong></li>
+			<li>Fecha de alta: <strong>${empleado.fechaAlta} </strong></li>
 
 		</ul>
 
@@ -57,8 +56,7 @@
 		<ul>
 			<li>idCategoria : <strong>${empleado.categorias.idcategorias}
 			</strong></li>
-			<li>Nombre : <strong>${empleado.categorias.nombre}
-			</strong></li>
+			<li>Nombre : <strong>${empleado.categorias.nombre} </strong></li>
 			<li>Descripción : <strong>${empleado.categorias.descripcion}
 			</strong></li>
 
@@ -78,7 +76,8 @@
 			</strong></li>
 
 		</ul>
-		<a href="http://localhost:8080/Spring11-MVCHibernate/">Volver a la pagina de inicio</a>
+		<a href="http://localhost:8080/Spring11-MVCHibernate/" style="padding-left: 30px;border-top-style: solid;border-top-width: 0px;">Volver a la
+			pagina de inicio</a>
 
 	</div>
 </body>

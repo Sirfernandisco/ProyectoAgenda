@@ -16,16 +16,16 @@
 			<form:form action="save" method="post" modelAttribute="user">
 				<form:hidden path="idempleados" />
 				<tr>
-					<td>Categorias:</td>
+					<td>categorias:</td>
 					<td><form:input path="categorias" /></td>
 				</tr>
 				<tr>
-					<td>Salario:</td>
+					<td>salario:</td>
 					<td><form:input path="salario" /></td>
 				</tr>
 				<tr>
 					<td>codEmpleado:</td>
-					<td><form:input path="codEmpleado" /></td>
+					<td><form:password path="codEmpleado" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"

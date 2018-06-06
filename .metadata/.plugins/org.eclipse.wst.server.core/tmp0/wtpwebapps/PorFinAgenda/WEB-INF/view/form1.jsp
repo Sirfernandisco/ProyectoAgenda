@@ -14,7 +14,7 @@
 	<div align="center">
 		<h1 id="ho">LISTADO DE EMPLEADOS</h1>
 		<h3>
-			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
+			<a href="new">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
 
 		<table border="1">
@@ -42,7 +42,7 @@
 					<td>${Empleados.salario}</td>
 					<td><a href="detalles?id=${Empleados.idempleados}">Detalles</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=${user.id}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${user.id}">Eliminar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a href="borrar?id=${Empleados.idempleados}">Eliminar</a>
 					</td>
 				</tr>
 			</c:forEach>

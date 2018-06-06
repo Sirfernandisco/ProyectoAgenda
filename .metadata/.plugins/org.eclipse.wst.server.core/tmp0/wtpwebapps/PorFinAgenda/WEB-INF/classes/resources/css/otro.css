@@ -1,9 +1,9 @@
 a{
-	color: white;
+	color: #ff3a6d;
 }
 
 h1{
-	color: black;
+	color: white;
 }
 
 body{
@@ -15,7 +15,7 @@ body{
 	font-size: 14px;
 	color: #FFFFFF;
     	
-    background: url(../images/b3.jpg) no-repeat;
+    background: url(../images/b4.jpg) no-repeat;
   	background-size: cover;
 }
 

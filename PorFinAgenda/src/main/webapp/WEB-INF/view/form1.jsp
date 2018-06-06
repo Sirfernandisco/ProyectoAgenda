@@ -14,7 +14,7 @@
 	<div align="center">
 		<h1 id="ho">LISTADO DE EMPLEADOS</h1>
 		<h3>
-			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
+			<a href="new">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
 
 		<table border="1">
