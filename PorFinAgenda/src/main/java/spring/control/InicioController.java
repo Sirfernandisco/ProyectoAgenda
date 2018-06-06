@@ -85,7 +85,7 @@ public class InicioController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView saveUser(@ModelAttribute Empleados user) {
 		userService.saveOrUpdate(user);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/mostrar");
 	}
 	
 	
