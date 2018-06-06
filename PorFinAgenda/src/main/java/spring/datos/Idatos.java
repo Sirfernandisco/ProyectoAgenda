@@ -17,6 +17,6 @@ public interface Idatos {
 	
 	public void saveOrUpdate(Empleados empleado);
 	
-	public void borrarEmpleado(int id);
+	public void borrarEmpleado(int id,String cod);
 
 }

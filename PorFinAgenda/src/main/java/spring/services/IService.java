@@ -17,5 +17,5 @@ public interface IService {
 	
 	public void saveOrUpdate(Empleados Empleado);
 	
-	public void borrarEmpleado(int id);
+	public void borrarEmpleado(int id, String cod);
 }
