@@ -13,6 +13,8 @@ public interface Idatos {
 	
 	public Personas get(String apellido);
 	
+	public Empleados getEmpleado(int id);
+	
 	//public void saveOrUpdate(User user);
 	
 	//public void delete(int id);

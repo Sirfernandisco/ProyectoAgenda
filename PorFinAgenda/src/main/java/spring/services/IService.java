@@ -12,4 +12,6 @@ public interface IService {
 	public List<Empleados> mostrarEmpleados();
 
 	public Personas get(String apellido);
+	
+	public Empleados getEmpleado(int id);
 }

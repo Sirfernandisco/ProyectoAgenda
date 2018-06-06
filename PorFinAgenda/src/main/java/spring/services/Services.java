@@ -56,5 +56,11 @@ public class Services implements IService{
 //
 //		}
 
+		@Override
+		public Empleados getEmpleado(int id) {
+			
+			return datos.getEmpleado(id);
+		}
+
 
 }
