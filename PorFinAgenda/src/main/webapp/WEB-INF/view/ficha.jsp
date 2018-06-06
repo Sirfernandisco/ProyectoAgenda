@@ -50,7 +50,7 @@
 		<ul>
 			<li>idDepartamento : <strong>${empleado.departamentos.iddepartamento}
 			</strong></li>
-<%-- 			<li>Nombre : <strong>${empleado..departamentos.nombre}</strong></li> --%>
+			<li>Nombre : <strong>${empleado.departamentos.nombre}</strong></li>
 
 		</ul>
 		<h3>Categoría</h3>
