@@ -14,6 +14,7 @@
 	<div align="center">
 		<h1 id="ho">LISTADO DE EMPLEADOS</h1>
 		<h3>
+			<a href="http://localhost:8080/Spring11-MVCHibernate/">Volver al buscador</a><br>
 			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
 
