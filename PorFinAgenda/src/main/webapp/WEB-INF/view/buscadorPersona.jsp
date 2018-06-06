@@ -12,10 +12,11 @@
 <body>
 
 	<div align="center">
-		<h1>Detalles</h1>
-	</div>
-	<div class="listas">
-		<h3>
+		<h1>Datos de la persona</h1>
+		<br/>
+		<br/>
+		<br/>
+		<!-- <h3>
 			 Persona
 		</h3>
 			<ul>
@@ -68,19 +69,21 @@
 				<li>Localidad : <strong>${persona.direccioneses.localidad} </strong></li>
 				<li>Provincia : <strong>${persona.direccioneses.provincia} </strong></li>
 
-			</ul>
+			</ul> -->
 			
 		
 
 		<table border="1">
 			<tr>
-				<th>id</th>
+				<th>idPersona</th>
 				<th>Nombre Apellidos</th>
 				<th>dni</th>
 				<th>Fecha Nacimiento</th>
 				<th>Telefono</th>
 				<th>Direccion</th>
-				<th></th>
+				<th>Localidad</th>
+				<th>Provincia</th>
+				<th>idEmpleado</th>
 				
 			</tr>
 
@@ -92,9 +95,10 @@
 					<td>${persona.fechaNacimiento}</td>
 					<td>${persona.telefonoses.telefono}</td>
 					<td>${persona.direccioneses.direccion}</td>
+					<td>${persona.direccioneses.localidad}</td>
+					<td>${persona.direccioneses.provincia}</td>
+					<td>${persona.empleados.idempleados}</td>
 					<td><a href="detail?id=${user.id}">Detalles</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=${user.id}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${user.id}">Eliminar</a>
 					</td>
 				</tr>
 			
