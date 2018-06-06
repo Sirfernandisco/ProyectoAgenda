@@ -14,7 +14,6 @@
 	<div align="center">
 		<h1 id="ho">LISTADO DE EMPLEADOS</h1>
 		<h3>
-			<a href="http://localhost:8080/Spring11-MVCHibernate/">Volver al buscador</a><br>
 			<a href="/">Clic para crear un NUEVO EMPLEADO</a>
 		</h3>
 
@@ -35,20 +34,21 @@
 					<td>${Empleados.idempleados}</td>
 					<td>${Empleados.codEmpleado}</td>
 					<td>${Empleados.personases.nombre}
-					${Empleados.personases.apellido1}
-					${Empleados.personases.apellido2}</td>
+						${Empleados.personases.apellido1}
+						${Empleados.personases.apellido2}</td>
 					<td>${Empleados.personases.telefonoses.telefono}</td>
 					<td>${Empleados.categorias.nombre}</td>
 					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.salario}</td>
-					<td><a href="detail?id=${user.id}">Detalles</a>
+					<td><a href="detalles?id=${Empleados.idempleados}">Detalles</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=${user.id}">Modificar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=${user.id}">Eliminar</a>
 					</td>
 				</tr>
 			</c:forEach>
-
 		</table>
+		<a href="http://localhost:8080/Spring11-MVCHibernate/">Volver al
+			buscador</a><br>
 	</div>
 </body>
 </html>

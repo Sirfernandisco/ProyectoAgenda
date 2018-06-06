@@ -62,5 +62,13 @@ public class Services implements IService{
 			return datos.getEmpleado(id);
 		}
 
+		@Override
+		public void borrarEmpleado(int id) {
+			datos.borrarEmpleado(id);
+			
+		}
+		
+		
+
 
 }

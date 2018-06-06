@@ -75,6 +75,17 @@ public class Datos implements Idatos{
 		Empleados empleado = (Empleados) query.uniqueResult();
 		return empleado;
 	}
+
+	@Override
+	public void borrarEmpleado(int id) {
+		
+		Empleados borrar = new Empleados();
+		borrar.setIdempleados(id);
+		sessionFactory.getCurrentSession().delete(borrar);
+			
+	}
+	
+	
 }
 
 
