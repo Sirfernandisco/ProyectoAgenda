@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.omg.CORBA.Request;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -64,6 +64,15 @@ public class InicioController {
 			ModelAndView model = new ModelAndView("noEncontrado");
 			return model;
 		}
+	}
+	
+	@RequestMapping(value = "/detalles", method = RequestMethod.GET)
+	public ModelAndView deleteUser(HttpServletRequest request) {
+		int id = Integer.parseInt(request.getParameter("id"));
+		Empleados empleado=userService.getEmpleado(id);
+		ModelAndView model = new ModelAndView("ficha");
+		model.addObject("empleado", empleado);
+		return model;		
 	}
 
 	// @RequestMapping(value = "/addCliente", method = RequestMethod.POST)
