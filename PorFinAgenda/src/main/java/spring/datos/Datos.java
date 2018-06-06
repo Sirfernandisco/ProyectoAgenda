@@ -56,9 +56,10 @@ public class Datos implements Idatos{
 	@Override
 	@Transactional
 	public Personas get(String apellido1) {
-		String hql = "from Personas where p.apellido1="+ apellido1;
-		Query query = sessionFactory.getCurrentSession().createSQLQuery(hql);
+		String hql = "from Personas where apellido1= :apellido1";
 		
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setParameter("apellido1", apellido1);
 		
 		Personas persona = (Personas) query.uniqueResult();
 		
