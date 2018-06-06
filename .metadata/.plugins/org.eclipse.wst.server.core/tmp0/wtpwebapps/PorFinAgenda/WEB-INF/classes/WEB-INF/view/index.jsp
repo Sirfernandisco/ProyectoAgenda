@@ -14,51 +14,38 @@
     <meta name="keywords" content="#">
     <!-- Page Title -->
     <title>Agenda RoneaWork</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--     Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-<!--     Simple line Icon -->
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-<!--     Themify Icon -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-<!--     Hover Effects -->
-    <link rel="stylesheet" href="css/set1.css">
-<!--     Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
     
- <%--   <spring:url value="/resources/css/bootstrap.min.css" var="estilos1" />
-		<link href="${estilos1}" rel="stylesheet" />
-		<spring:url value="resources/css/bootstrap.min.css" var="bootstrap"/>
-        <link href="${bootstrap}" rel="stylesheet" />
-        <spring:url value="resources/css/style.css" var="custom"/>
-        <link href="${custom}" rel="stylesheet" />  
-		
-		<spring:url value="/resources/css/custom.css" var="estilos3" />
-		<link href="${estilos3}" rel="stylesheet" />		
+<%--     <spring:url value="/resources/css/style.css" var="estilos" /> --%>
+<%-- 	<link href="${estilos}" rel="stylesheet" />  --%>
+    
+<%--     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" /> --%>
+<%-- 	<link href="${bootstrap}" rel="stylesheet" /> --%>
 	
-		<spring:url value="/resources/css/bootstrap.min.css" var="estilos2" />
-		<link href="${estilos2}" rel="stylesheet" />	
-		
-        <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
-        
-        <link href="resources/css/style.css" rel="stylesheet" type="text/css" />    
-         <link href="resources/style.css" rel="stylesheet" type="text/css" />   
+<%-- 	<spring:url value="/resources/css/simple-line-icons.css" var="line" /> --%>
+<%-- 	<link href="${line}" rel="stylesheet" /> --%>
+	
+<%-- 	<spring:url value="/resources/css/themify-icons.css" var="icon" /> --%>
+<%-- 	<link href="${icon}" rel="stylesheet" /> --%>
+	
+<%-- 	<spring:url value="/resources/css/set1.css" var="set" /> --%>
+<%-- 	<link href="${set}" rel="stylesheet" /> --%>
+	
+	
+	
+	
     
-     <spring:url value="css/bootstrap.min.css" var="bootstrap" /> --%>
-<%--     <spring:url value="css/simple-line-icons.css" var="icons" /> --%>
-<%--     <spring:url value="css/themify-icons.css" var="themify" /> --%>
-<%--     <spring:url value="css/set1.css" var="set1" /> --%>
-<%--     <spring:url value="css/style.css" var="style" /> --%>
-    
-<!--     <link href="resources/css/bootstrap.css" rel="stylesheet" media="screen"> -->
-    
-    
-<%--     <link href="${bootstrap}" rel="stylesheet" media="screen"/> --%>
-<%--     <link href="${icons}" rel="stylesheet" /> --%>
-<%--     <link href="${themify}" rel="stylesheet" /> --%>
-<%--     <link href="${set1}" rel="stylesheet" /> --%>
-<%--     <link href="${style}" rel="stylesheet" /> --%>
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon 
+    <link rel="stylesheet" href="css/simple-line-icons.css">-->
+    <!-- Themify Icon 
+    <link rel="stylesheet" href="css/themify-icons.css">-->
+    <!-- Hover Effects 
+    <link rel="stylesheet" href="css/set1.css">-->
+    <!-- Main CSS 
+    <link rel="stylesheet" href="/style.css">-->
 </head>
 
 <body>
@@ -76,11 +63,11 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                    
-                                    <li class="nav-item active">
+                                    <li class="nav-item active" style="color: black">
                                         <a class="nav-link" href="mostrar"><strong>Empleados</strong></a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"><strong>CategorÃ­a</strong></a>
+                                        <a class="nav-link" href="#"><strong>Categoría</strong></a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="#"><strong>Departamentos</strong></a>
@@ -114,7 +101,7 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <form class="form-wrap mt-4" action="buscar" method="post">
+                                <form class="form-wrap mt-4" method="post" action="buscar">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <input type="text" placeholder="Primer Apellido" class="btn-group1" name="primer">
                                         <input type="text" placeholder="Segundo apellido" class="btn-group2" name="segundo">
