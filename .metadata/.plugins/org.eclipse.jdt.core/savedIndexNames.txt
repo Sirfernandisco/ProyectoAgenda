@@ -10,7 +10,6 @@ INDEX VERSION 1.129+C:\Users\admin\Documents\GitHub\ProyectoAgenda\.metadata\.pl
 1111690661.index
 1392172246.index
 909861168.index
-2995339032.index
 3537799689.index
 2094716390.index
 535540601.index

@@ -14,7 +14,7 @@
 	<div align="center">
 		<h1>Todos los detalles de un empleado</h1>
 	</div>
-	<div style="padding-left: 800px;border-left-style: solid;border-left-width: 0px;">
+	<div class="divi">
 		<br /> <br />
 		<h3>Detalles de empleado</h3>
 		<ul>
