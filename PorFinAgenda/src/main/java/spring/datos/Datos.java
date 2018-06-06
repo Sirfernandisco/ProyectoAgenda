@@ -66,6 +66,15 @@ public class Datos implements Idatos{
 		
 		return persona;
 	}
+	
+	@Override
+	public Empleados getEmpleado(int id){
+		String hql = "from Empleados where idempleados= :id";	
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setParameter("id", id);
+		Empleados empleado = (Empleados) query.uniqueResult();
+		return empleado;
+	}
 }
 
 
