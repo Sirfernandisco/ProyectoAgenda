@@ -14,18 +14,18 @@
 		<h1>FORMULARIO DE USUARIOS (add/edit)</h1>
 		<table>
 			<form:form action="save" method="post" modelAttribute="user">
-				<form:hidden path="idempleados" />
+				<form:hidden path="id" />
 				<tr>
-					<td>Categorias:</td>
-					<td><form:input path="categorias" /></td>
+					<td>Usuario:</td>
+					<td><form:input path="username" /></td>
 				</tr>
 				<tr>
-					<td>Salario:</td>
-					<td><form:input path="salario" /></td>
+					<td>Email:</td>
+					<td><form:input path="email" /></td>
 				</tr>
 				<tr>
-					<td>codEmpleado:</td>
-					<td><form:input path="codEmpleado" /></td>
+					<td>Password:</td>
+					<td><form:password path="password" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"

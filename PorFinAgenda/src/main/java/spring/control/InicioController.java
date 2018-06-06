@@ -77,9 +77,15 @@ public class InicioController {
 	
 	@RequestMapping(value = "/new", method = RequestMethod.GET)
 	public ModelAndView newUser() {
-		ModelAndView model = new ModelAndView("form1");
+		ModelAndView model = new ModelAndView("darAlta");
 		model.addObject("user", new Empleados());
 		return model;		
+	}
+	
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public ModelAndView saveUser(@ModelAttribute Empleados user) {
+		userService.saveOrUpdate(user);
+		return new ModelAndView("redirect:/");
 	}
 	
 	
