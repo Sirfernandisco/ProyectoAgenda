@@ -21,16 +21,6 @@ public class Services implements IService{
 		@Autowired
 		private Idatos datos;
 		
-		/*
-		public UserServiceImpl(){
-			
-		}
-		
-		public UserServiceImpl(UserDAO userDAO) {
-			super();
-			this.userDAO = userDAO;
-		}
-		*/
 
 
 		@Override
@@ -49,12 +39,12 @@ public class Services implements IService{
 			datos.saveOrUpdate(Empleado);
 
 		}
+		@Override
+		public void saveOrUpdateP(Personas persona) {
+			datos.saveOrUpdateP(persona);
 
-//		@Override
-//		public void delete(int id) {
-//			userDAO.delete(id);
-//
-//		}
+		}
+
 
 		@Override
 		public Empleados getEmpleado(int id) {

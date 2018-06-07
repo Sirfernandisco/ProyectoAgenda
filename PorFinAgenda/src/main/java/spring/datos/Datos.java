@@ -45,13 +45,11 @@ public class Datos implements Idatos{
 		sessionFactory.getCurrentSession().saveOrUpdate(Empleado);
 	}
 
-//	@Override
-//	@Transactional
-//	public void delete(int id) {
-//		User userToDelete = new User();
-//		userToDelete.setId(id);
-//		sessionFactory.getCurrentSession().delete(userToDelete);
-//	}
+	@Override
+	@Transactional
+	public void saveOrUpdateP(Personas persona) {
+		sessionFactory.getCurrentSession().saveOrUpdate(persona);
+	}
 
 	@Override
 	@Transactional

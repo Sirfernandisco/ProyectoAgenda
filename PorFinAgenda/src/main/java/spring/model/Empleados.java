@@ -119,18 +119,11 @@ public class Empleados implements java.io.Serializable {
 	public void setPersonases(Personas personases) {
 		this.personases = personases;
 	}
-
-	/*@Override
-	public String toString() {
-		return "Empleados [idempleados=" + idempleados + ", categorias=" + categorias + "]";
-	}*/
 	
 	@Override
 	public String toString() {
 		return "Empleados [idempleados=" + idempleados + ", categorias=" + categorias + ", departamentos="
 				+ departamentos + ", codEmpleado=" + codEmpleado + ", salario=" + salario + ", fechaAlta=" + fechaAlta + "]";
 	}
-
-	
 	
 }
