@@ -1,5 +1,8 @@
 package spring.test;
 
+
+import static org.junit.Assert.assertTrue;
+
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
@@ -26,19 +29,11 @@ public class PruebasUnitarias {
 	@Autowired
 	private Idatos datos;
 	
-	@Test
-	public void testBuscar(){
-		resultadoReal=5+5;
-		resultadoEsperado=10;
-		
-		
-	}
 	
-	@Test
-	public void testAddTwo(){		
-		
-		
-	}
+	
+	
+	
+
 	
 	
 }
