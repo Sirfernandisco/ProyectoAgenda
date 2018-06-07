@@ -15,25 +15,9 @@
 		<table>
 			<form:form action="save" method="post" modelAttribute="user">
 				<form:hidden path="idempleados" />
-				<!-- 				<tr> -->
-				<!-- 					<td>idempleados:</td> -->
-				<%-- 					<td><form:input path="idempleados" /></td> --%>
-				<!-- 				</tr> -->
 				<tr>
 					<td>codEmpleado:</td>
 					<td><form:input path="codEmpleado" /></td>
-				</tr>
-				<tr>
-					<td>Nombre:</td>
-					<td><form:input path="personases.nombre" /></td>
-				</tr>
-				<tr>
-					<td>Primer apellido:</td>
-					<td><form:input path="personases.apellido1" /></td>
-				</tr>
-				<tr>
-					<td>Segundo apellido:</td>
-					<td><form:input path="personases.apellido2" /></td>
 				</tr>
 				<tr>
 					<td>Salario:</td>
@@ -48,7 +32,7 @@
 					<td><form:input path="departamentos.iddepartamento" /></td>
 				</tr>
 				<tr>
-					<td>Categorias:</td>
+				<td>idCategoria:</td>
 					<td><form:input path="categorias.idcategorias" /></td>
 				</tr>
 

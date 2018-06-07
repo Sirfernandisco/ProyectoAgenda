@@ -41,8 +41,8 @@
 					<td>${Empleados.departamentos.nombre}</td>
 					<td>${Empleados.salario}</td>
 					<td><a href="detalles?id=${Empleados.idempleados}">Detalles</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=${user.id}">Modificar</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a href="borrar?id=${Empleados.idempleados}">Eliminar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="editar?id=${Empleados.idempleados}">Modificar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a href="borrar?id=${Empleados.idempleados}&codEmpleado=${Empleados.codEmpleado}">Eliminar</a>
 					</td>
 				</tr>
 			</c:forEach>
