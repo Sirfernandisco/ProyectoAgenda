@@ -20,5 +20,7 @@ public interface Idatos {
 	public void saveOrUpdateP(Personas persona);
 	
 	public void borrarEmpleado(int id,String cod);
+	
+	public int suma(int a, int b);
 
 }

@@ -1,7 +1,8 @@
 package spring.test;
 
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+
 
 import org.junit.ClassRule;
 import org.junit.Rule;
@@ -18,16 +19,26 @@ import spring.datos.Idatos;
 
 public class PruebasUnitarias {
 
+
+	
 	@ClassRule 
 	public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();	
 	@Rule
     public final SpringMethodRule springMethodRule = new SpringMethodRule();
 	
-    private float resultadoReal;
-    private float resultadoEsperado;
+    private int a;
+    private int b;
 	
 	@Autowired
 	private Idatos datos;
+	
+	
+	@Test
+	public void comprobarSuma(){
+		a=3;
+		b=2;
+		assertEquals(5, datos.suma(a, b));
+	}
 	
 	
 	

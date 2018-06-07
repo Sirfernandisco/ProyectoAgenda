@@ -94,6 +94,14 @@ public class Datos implements Idatos{
 		log.info("*******************Borrar Empleado *****************");
 			
 	}
+
+	@Override
+	public int suma(int a, int b) {
+		
+		return a+b;
+	}
+	
+	
 	
 	
 }
