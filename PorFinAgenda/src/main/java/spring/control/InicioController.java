@@ -93,6 +93,12 @@ public class InicioController {
 		return new ModelAndView("redirect:/new2?id="+user.getIdempleados());
 	}
 	
+	@RequestMapping(value = "/save3", method = RequestMethod.POST)
+	public ModelAndView saveUser3(@ModelAttribute Empleados user) {
+		userService.saveOrUpdate(user);
+		return new ModelAndView("redirect:/mostrar");
+	}
+	
 	//Persona
 	@RequestMapping(value = "/new2", method = RequestMethod.GET)
 	public ModelAndView newUser2(HttpServletRequest request) {
@@ -124,16 +130,23 @@ public class InicioController {
 		return new ModelAndView("redirect:/mostrar");		
 	}
 	
+//	@RequestMapping(value = "/editar", method = RequestMethod.GET)
+//	public ModelAndView editUser(HttpServletRequest request) {
+//		int id = Integer.parseInt(request.getParameter("id"));
+//		Empleados emp = userService.getEmpleado(id);
+//		ModelAndView model = new ModelAndView("darAlta");
+//		model.addObject("user", emp);
+//		return model;		
+//	}
+	
 	@RequestMapping(value = "/editar", method = RequestMethod.GET)
 	public ModelAndView editUser(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		Empleados emp = userService.getEmpleado(id);
-		ModelAndView model = new ModelAndView("darAlta");
+		ModelAndView model = new ModelAndView("Modificar");
 		model.addObject("user", emp);
 		return model;		
 	}
-	
-	
 	
 	
 
