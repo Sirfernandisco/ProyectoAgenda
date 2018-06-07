@@ -93,18 +93,11 @@ public class InicioController {
 		return new ModelAndView("redirect:/new2?id="+user.getIdempleados());
 	}
 	
-	@RequestMapping(value = "/save3", method = RequestMethod.POST)
-	public ModelAndView saveUser3(@ModelAttribute Empleados user) {
-		userService.saveOrUpdate(user);
-		return new ModelAndView("redirect:/mostrar");
-	}
 	
 	//Persona
 	@RequestMapping(value = "/new2", method = RequestMethod.GET)
 	public ModelAndView newUser2(HttpServletRequest request) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		System.out.println(id);
-		Empleados emp = userService.getEmpleado(id);
+		Empleados emp = userService.getEmpleado(Integer.parseInt(request.getParameter("id")));
 		Personas p = new Personas();
 		p.setEmpleados(emp);
 		ModelAndView model = new ModelAndView("darAltaPersona");
@@ -115,12 +108,16 @@ public class InicioController {
 	
 	@RequestMapping(value = "/save2", method = RequestMethod.POST)
 	public ModelAndView saveUser(@ModelAttribute Personas user2) {
-		
-		//guarda
 		userService.saveOrUpdateP(user2);
 		return new ModelAndView("redirect:/mostrar");
 	}
 	
+	//
+	@RequestMapping(value = "/save3", method = RequestMethod.POST)
+	public ModelAndView saveUser3(@ModelAttribute Empleados user) {
+		userService.saveOrUpdate(user);
+		return new ModelAndView("redirect:/mostrar");
+	}
 	
 	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
 	public ModelAndView borrarEmpleado(HttpServletRequest request) {
@@ -130,14 +127,6 @@ public class InicioController {
 		return new ModelAndView("redirect:/mostrar");		
 	}
 	
-//	@RequestMapping(value = "/editar", method = RequestMethod.GET)
-//	public ModelAndView editUser(HttpServletRequest request) {
-//		int id = Integer.parseInt(request.getParameter("id"));
-//		Empleados emp = userService.getEmpleado(id);
-//		ModelAndView model = new ModelAndView("darAlta");
-//		model.addObject("user", emp);
-//		return model;		
-//	}
 	
 	@RequestMapping(value = "/editar", method = RequestMethod.GET)
 	public ModelAndView editUser(HttpServletRequest request) {
