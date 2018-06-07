@@ -29,11 +29,23 @@
 				</tr>
 				<tr>
 					<td>idDepartamento:</td>
-					<td><form:input path="departamentos.iddepartamento" /></td>
+					<td><select name="departamentos.iddepartamento">
+						<option value="1">RRHH</option>
+						<option value="2">Informática</option>
+						<option value="3">Logística</option>
+						<option value="4">Dirección</option>
+					</select></td>
 				</tr>
 				<tr>
-				<td>idCategoria:</td>
-					<td><form:input path="categorias.idcategorias" /></td>
+					<td>idCategoria:</td>
+					<td><select name="categorias.idcategorias">
+						<option value="1">Programador</option>
+						<option value="2">Analísta</option>
+						<option value="3">Técnico Recursos Humanos</option>
+						<option value="4">Secretaria</option>
+						<option value="5">Recepcionista</option>
+						<option value="6">Master del Universo</option>
+					</select></td>
 				</tr>
 
 
