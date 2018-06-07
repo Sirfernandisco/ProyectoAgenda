@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div align="center">
-		<h1>FORMULARIO DE USUARIOS (add/edit)</h1>
+		<h1>Formulario De Empleado (Modificar)</h1>
 		<table>
-			<form:form action="save" method="post" modelAttribute="user">
+			<form:form action="save3" method="post" modelAttribute="user">
 				<form:hidden path="idempleados" />
 				<tr>
 					<td>codEmpleado:</td>

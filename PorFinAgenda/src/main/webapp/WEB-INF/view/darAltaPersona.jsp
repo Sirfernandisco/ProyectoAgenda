@@ -13,30 +13,16 @@
 	<div align="center">
 		<h1>FORMULARIO DE USUARIOS (add/edit)</h1>
 		<table>
-			<form:form action="save" method="post" modelAttribute="user">
-				<form:hidden path="idempleados" />
-				<tr>
-					<td>codEmpleado:</td>
-					<td><form:input path="codEmpleado" /></td>
+			<form:form action="save2" method="post" modelAttribute="user2">
+			<form:hidden path="empleados.idempleados" />
+			<tr>
+					<td>Nombre:</td>
+					<td><form:input path="nombre" /></td>
 				</tr>
 				<tr>
-					<td>Salario:</td>
-					<td><form:input path="salario" /></td>
+					<td>Primer apellido:</td>
+					<td><form:input path="apellido1" /></td>
 				</tr>
-				<tr>
-					<td>fechaAlta:</td>
-					<td><form:input path="fechaAlta" /></td>
-				</tr>
-				<tr>
-					<td>idDepartamento:</td>
-					<td><form:input path="departamentos.iddepartamento" /></td>
-				</tr>
-				<tr>
-				<td>idCategoria:</td>
-					<td><form:input path="categorias.idcategorias" /></td>
-				</tr>
-
-
 				<tr>
 					<td colspan="2" align="center"><input type="submit"
 						value="Guardar Registro"></td>
