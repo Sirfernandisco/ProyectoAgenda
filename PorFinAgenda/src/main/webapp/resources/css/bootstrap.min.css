@@ -151,7 +151,7 @@ dfn {
 
 b, strong {
 	font-weight: bolder;
-	color: #ff3a6d;
+	color: white;
 }
 
 small {
@@ -3391,7 +3391,8 @@ tbody.collapse.show {
 	}
 	.navbar-expand-lg .navbar-collapse {
 		display: -ms-flexbox !important;
-		display: flex !important
+		display: flex !important;
+		font-size: 20px;
 	}
 	.navbar-expand-lg .navbar-toggler {
 		display: none
