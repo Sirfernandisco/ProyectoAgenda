@@ -26,7 +26,7 @@ import spring.model.Personas;
 import spring.model.Telefonos;
 
 
-//@EnableWebMvc
+@EnableWebMvc
 @Configuration
 @ComponentScan(basePackages="spring")
 @EnableTransactionManagement

@@ -12,4 +12,5 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="spring.model.Empleados"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 </qualifiedTypeNameHistroy>
