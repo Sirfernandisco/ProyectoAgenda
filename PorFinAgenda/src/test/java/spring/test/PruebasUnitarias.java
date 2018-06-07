@@ -3,6 +3,7 @@ package spring.test;
 import static org.junit.Assert.*;
 import org.apache.commons.logging. Log;
 import org.apache.commons.logging. LogFactory;
+import org.hamcrest.core.IsNull;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
@@ -29,6 +30,8 @@ public class PruebasUnitarias {
 
 	private int a;
 	private int b;
+	private String apellido1;
+	private Personas persona;
 
 	@Autowired
 	private Idatos datos;
@@ -42,14 +45,23 @@ public class PruebasUnitarias {
 	
 	@Test
 	public void testBuscadorEncontrar(){
-		assertEquals("Rodriguez",datos.get("Rodri").getApellido1());
+		//si le pasamos un applido que esta en la base de datos
+		apellido1="Rodri";
+		persona=datos.get(apellido1);
+		assertNotNull(persona);
+		
 	}
 	
 	@Test
 	public void testBuscadorNoEncontrar(){
-		log.info("************"+datos.get("")+"***************");
-		assertEquals("",datos.get("").getApellido1());
-		//assertNotEquals(unexpected, actual);
+		//si la pasamos un apellido que no esta en la abse de datos
+		apellido1="Pepito";
+		persona=datos.get(apellido1);		
+		assertNull(persona);
+		//o no le pasamos ningun parametro
+		persona=datos.get(null);
+		assertNull(persona);
+		
 	}
 
 }
