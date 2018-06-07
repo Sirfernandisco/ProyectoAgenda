@@ -32,7 +32,7 @@
 
 			<tr>
 				<td>${persona.idpersonas}</td>
-				<td>${persona.nombre}${persona.apellido1} ${persona.apellido2}</td>
+				<td>${persona.nombre} ${persona.apellido1} ${persona.apellido2}</td>
 				<td>${persona.dni}</td>
 				<td>${persona.fechaNacimiento}</td>
 				<td>${persona.telefonoses.telefono}</td>
