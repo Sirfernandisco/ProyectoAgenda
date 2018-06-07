@@ -30,7 +30,7 @@ public class InicioController {
 	
 	@ModelAttribute("Personas")
 	public Personas getClienteObject1() {
-		System.out.println("-- devuelvo un objeto vacio");
+		
 		return new Personas();
 	}
 

@@ -40,7 +40,7 @@ public class Datos implements Idatos{
 		Query query = sessionFactory.getCurrentSession().createQuery("from Empleados");
 		@SuppressWarnings("unchecked")
 		List<Empleados> listUser = (List<Empleados>) query.list();
-		log.info("Listado Empleados");
+		log.info("*******************Listado Empleados******************");
 
 		
 		return listUser;
@@ -51,13 +51,14 @@ public class Datos implements Idatos{
 	@Transactional
 	public void saveOrUpdate(Empleados Empleado) {
 		sessionFactory.getCurrentSession().saveOrUpdate(Empleado);
-		log.info("Guardar modificar Empleados");
+		log.info("****************Guardar modificar Empleados****************");
 	}
 
 	@Override
 	@Transactional
 	public void saveOrUpdateP(Personas persona) {
 		sessionFactory.getCurrentSession().saveOrUpdate(persona);
+		log.info("****************Guardar modificar Personas****************");
 	}
 
 	@Override
@@ -69,7 +70,7 @@ public class Datos implements Idatos{
 		query.setParameter("apellido1", apellido1+"%");
 		
 		Personas persona = (Personas) query.uniqueResult();
-		log.info("Busca una Persona por su primer apellido y la devuelve ");
+		log.info("*************Busca una Persona por su primer apellido y la devuelve******************");
 		return persona;
 	}
 	
@@ -79,7 +80,7 @@ public class Datos implements Idatos{
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("id", id);
 		Empleados empleado = (Empleados) query.uniqueResult();
-		log.info("Busca un Empleado por su primer apellido ");
+		log.info("****************Busca un Empleado por su id *********************");
 		return empleado;
 	}
 
@@ -90,7 +91,7 @@ public class Datos implements Idatos{
 		borrar.setIdempleados(id);
 		borrar.setCodEmpleado(cod);
 		sessionFactory.getCurrentSession().delete(borrar);
-		log.info("Borrar Empleado ");
+		log.info("*******************Borrar Empleado *****************");
 			
 	}
 	
