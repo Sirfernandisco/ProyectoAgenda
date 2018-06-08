@@ -21,6 +21,6 @@ public interface Idatos {
 	
 	public void borrarEmpleado(int id,String cod);
 	
-	public int suma(int a, int b);
+
 
 }

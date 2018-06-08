@@ -16,7 +16,7 @@
 	</div>
 	<div class="divi">
 		<br /> <br />
-		<h3>Detalles de empleado</h3>
+		<h3>Detalles de la persona</h3>
 		<ul>
 			<li>idPersona : <strong>
 					${empleado.personases.idpersonas}</strong></li>
@@ -35,7 +35,7 @@
 
 		</ul>
 
-		<h3>Empleado</h3>
+		<h3>Detalles del empleado</h3>
 		<ul>
 			<li>idEmpleado : <strong>${empleado.idempleados} </strong></li>
 			<li>Código de Empleado : <strong>${empleado.codEmpleado}

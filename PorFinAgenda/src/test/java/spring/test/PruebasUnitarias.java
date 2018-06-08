@@ -3,7 +3,7 @@ package spring.test;
 import static org.junit.Assert.*;
 import org.apache.commons.logging. Log;
 import org.apache.commons.logging. LogFactory;
-import org.hamcrest.core.IsNull;
+
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,20 +28,14 @@ public class PruebasUnitarias {
 	@Rule
 	public final SpringMethodRule springMethodRule = new SpringMethodRule();
 
-	private int a;
-	private int b;
+
 	private String apellido1;
 	private Personas persona;
 
 	@Autowired
 	private Idatos datos;
 
-	@Test
-	public void testSuma() {
-		a = 3;
-		b = 2;
-		assertEquals(5, datos.suma(a, b));
-	}
+
 	
 	@Test
 	public void testBuscadorEncontrar(){
