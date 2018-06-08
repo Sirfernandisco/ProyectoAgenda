@@ -48,36 +48,7 @@ public class InicioController {
 		return model;
 	}
 
-	@RequestMapping("/buscar")
-	public ModelAndView buscador(HttpServletRequest request) {
-
-		Personas persona;
-		String apellido1 = request.getParameter("primer");
-		// String apellido2 = request.getParameter("segundo");
-		if (apellido1 != "") {
-			persona = userService.get(apellido1);
-			if (persona == null) {
-				ModelAndView model = new ModelAndView("noEncontrado");
-				return model;
-			} else {
-				ModelAndView model = new ModelAndView("buscadorPersona");
-				model.addObject("persona", persona);
-				return model;
-			}
-		} else {
-			ModelAndView model = new ModelAndView("noEncontrado");
-			return model;
-		}
-	}
 	
-	@RequestMapping(value = "/detalles", method = RequestMethod.GET)
-	public ModelAndView buscarIdEmpleado(HttpServletRequest request) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		Empleados empleado=userService.getEmpleado(id);
-		ModelAndView model = new ModelAndView("ficha");
-		model.addObject("empleado", empleado);
-		return model;		
-	}
 	
 	//Empleado
 	@RequestMapping(value = "/new", method = RequestMethod.GET)
@@ -112,12 +83,25 @@ public class InicioController {
 		return new ModelAndView("redirect:/mostrar");
 	}
 	
+	@RequestMapping(value = "/editar", method = RequestMethod.GET)
+	public ModelAndView editUser(HttpServletRequest request) {
+		int id = Integer.parseInt(request.getParameter("id"));
+		Empleados emp = userService.getEmpleado(id);
+		ModelAndView model = new ModelAndView("Modificar");
+		model.addObject("user", emp);
+		return model;		
+	}
+	
 	//modificar
 	@RequestMapping(value = "/save3", method = RequestMethod.POST)
 	public ModelAndView saveUser3(@ModelAttribute Empleados user) {
 		userService.saveOrUpdate(user);
 		return new ModelAndView("redirect:/mostrar");
 	}
+	
+
+	
+	
 	
 	@RequestMapping(value = "/borrar", method = RequestMethod.GET)
 	public ModelAndView borrarEmpleado(HttpServletRequest request) {
@@ -128,12 +112,36 @@ public class InicioController {
 	}
 	
 	
-	@RequestMapping(value = "/editar", method = RequestMethod.GET)
-	public ModelAndView editUser(HttpServletRequest request) {
+
+	
+	@RequestMapping("/buscar")
+	public ModelAndView buscador(HttpServletRequest request) {
+
+		Personas persona;
+		String apellido1 = request.getParameter("primer");
+		// String apellido2 = request.getParameter("segundo");
+		if (apellido1 != "") {
+			persona = userService.get(apellido1);
+			if (persona == null) {
+				ModelAndView model = new ModelAndView("noEncontrado");
+				return model;
+			} else {
+				ModelAndView model = new ModelAndView("buscadorPersona");
+				model.addObject("persona", persona);
+				return model;
+			}
+		} else {
+			ModelAndView model = new ModelAndView("noEncontrado");
+			return model;
+		}
+	}
+	
+	@RequestMapping(value = "/detalles", method = RequestMethod.GET)
+	public ModelAndView buscarIdEmpleado(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("id"));
-		Empleados emp = userService.getEmpleado(id);
-		ModelAndView model = new ModelAndView("Modificar");
-		model.addObject("user", emp);
+		Empleados empleado=userService.getEmpleado(id);
+		ModelAndView model = new ModelAndView("ficha");
+		model.addObject("empleado", empleado);
 		return model;		
 	}
 	
