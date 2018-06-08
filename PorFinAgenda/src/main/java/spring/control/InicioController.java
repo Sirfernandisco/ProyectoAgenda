@@ -112,7 +112,7 @@ public class InicioController {
 		return new ModelAndView("redirect:/mostrar");
 	}
 	
-	//
+	//modificar
 	@RequestMapping(value = "/save3", method = RequestMethod.POST)
 	public ModelAndView saveUser3(@ModelAttribute Empleados user) {
 		userService.saveOrUpdate(user);
